@@ -1,7 +1,8 @@
-package com.burhanuday.potholego
+package com.burhanuday.potholego.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.burhanuday.potholego.R
 
 class Signin : AppCompatActivity() {
 

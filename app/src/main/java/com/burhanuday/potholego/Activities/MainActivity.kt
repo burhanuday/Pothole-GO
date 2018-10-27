@@ -1,8 +1,9 @@
-package com.burhanuday.potholego
+package com.burhanuday.potholego.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.burhanuday.potholego.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,5 +15,6 @@ class MainActivity : AppCompatActivity() {
     fun fabClicked(view: View){
         //handle fab click
         //open camera to add new pothole
+
     }
 }
