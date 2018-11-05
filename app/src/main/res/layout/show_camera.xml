@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              xmlns:opencv="http://schemas.android.com/apk/res-auto"
+              android:layout_height="match_parent">
+
+    <org.opencv.android.JavaCameraView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:id="@+id/show_camera_activity_java_surface_view"
+            opencv:show_fps="true"
+            opencv:camera_id="any"
+            opencv:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" opencv:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            opencv:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            opencv:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

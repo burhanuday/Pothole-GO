@@ -15,8 +15,8 @@
             app:layout_constraintStart_toStartOf="parent"
     />
     <ImageView
-            android:layout_width="48"
-            android:layout_height="48" app:srcCompat="@drawable/ic_camera_24dp" android:id="@+id/iv_capture"
+            android:layout_width="48dp"
+            android:layout_height="48dp" app:srcCompat="@drawable/ic_camera_24dp" android:id="@+id/iv_capture"
             android:layout_marginBottom="24dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>

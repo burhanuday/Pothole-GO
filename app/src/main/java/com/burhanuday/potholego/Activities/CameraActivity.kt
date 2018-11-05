@@ -231,7 +231,7 @@ class CameraActivity : AppCompatActivity() {
                     if (cameraDevice == null){
                         return
                     }
-                    cameraCaptureSession = cameraCaptureSession
+                    cameraCaptureSession = session!!
                     updatePreview()
                 }
 
@@ -251,7 +251,7 @@ class CameraActivity : AppCompatActivity() {
             imageDimension = map.getOutputSizes(SurfaceTexture::class.java)[0]
             //add permission for camera and ask user
             val perms = arrayOf("Manifest.permission.CAMERA", "Manifest.permission.WRITE_EXTERNAL_STORAGE")
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED ||
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED &&
                     ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(this, perms, REQUEST_CAMERA_PERMISSION)
                 return
