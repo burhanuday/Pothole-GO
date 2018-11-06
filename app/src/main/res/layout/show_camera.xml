@@ -4,16 +4,24 @@
               xmlns:opencv="http://schemas.android.com/apk/res-auto"
               android:layout_height="match_parent">
 
-    <org.opencv.android.JavaCameraView
+    <com.burhanuday.potholego.OpenCameraView
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:visibility="gone"
             android:id="@+id/show_camera_activity_java_surface_view"
             opencv:show_fps="true"
             opencv:camera_id="any"
-            opencv:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp" opencv:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
-            opencv:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            opencv:layout_constraintBottom_toBottomOf="parent"
+            opencv:layout_constraintTop_toTopOf="parent"
+            opencv:layout_constraintEnd_toEndOf="parent"
             opencv:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:contentDescription="CaptureButton"
+            android:tint="@color/colorPrimary"
+            android:layout_width="50dp"
+            android:layout_height="50dp" opencv:srcCompat="@drawable/ic_camera_24dp"
+            android:id="@+id/iv_capture" opencv:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            opencv:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="24dp" opencv:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

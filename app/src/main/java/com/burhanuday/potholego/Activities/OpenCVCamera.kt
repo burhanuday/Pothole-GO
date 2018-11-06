@@ -1,5 +1,6 @@
 package com.burhanuday.potholego.Activities
 
+import android.hardware.Camera
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v4.app.FragmentActivity
@@ -14,11 +15,19 @@ import android.view.SurfaceView
 import android.view.View
 import org.opencv.android.JavaCameraView
 import android.view.WindowManager
+import android.widget.Toast
+import com.burhanuday.potholego.OpenCameraView
+import com.burhanuday.potholego.preprocess.ImagePreprocessor
+import com.burhanuday.potholego.utils.Constants
+import com.burhanuday.potholego.utils.FolderUtil
+import com.burhanuday.potholego.utils.Utilities
+import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.Core
 import org.opencv.core.CvType
 import org.opencv.imgproc.Imgproc
+import java.io.File
 
 
 /**
@@ -26,31 +35,46 @@ import org.opencv.imgproc.Imgproc
  */
 class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListener2 {
     val TAG = "OPENCVCAMERA"
-    private lateinit var mOpenCvCameraView: CameraBridgeViewBase
+    private lateinit var mOpenCvCameraView: OpenCameraView
     private var isJavaCamera: Boolean = true
     private lateinit var mItemSwitchCamera: MenuItem
     lateinit var mRgba:Mat
     lateinit var mRgbaF:Mat
     lateinit var mRgbaT:Mat
+    lateinit var des:Mat
+    lateinit var forward:Mat
+    lateinit var preprocessor: ImagePreprocessor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i(TAG, "called onCreate")
         super.onCreate(savedInstanceState)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         supportActionBar!!.hide()
-
         setContentView(R.layout.show_camera)
-
-        mOpenCvCameraView = findViewById<View>(R.id.show_camera_activity_java_surface_view) as JavaCameraView
-
+        mOpenCvCameraView = findViewById<View>(R.id.show_camera_activity_java_surface_view) as OpenCameraView
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
-
         mOpenCvCameraView.setCvCameraViewListener(this)
+        mOpenCvCameraView.disableFpsMeter()
+        preprocessor = ImagePreprocessor()
+
+
+        //capture button listener
+        iv_capture.setOnClickListener{
+            val outPicture = Constants.SCAN_IMAGE_LOCATION + File.separator + Utilities.generateFilename()
+            FolderUtil.createDefaultFolder(Constants.SCAN_IMAGE_LOCATION)
+
+            mOpenCvCameraView.takePicture(outPicture)
+            Toast.makeText(this@OpenCVCamera, "Picture has been taken ", Toast.LENGTH_LONG).show()
+            Log.d(TAG, "Path $outPicture")
+        }
     }
     override fun onCameraViewStarted(width: Int, height: Int) {
         mRgba = Mat(height, width, CvType.CV_8UC4)
         mRgbaF = Mat(height, width, CvType.CV_8UC4)
         mRgbaT = Mat(width, width, CvType.CV_8UC4)
+
+        des = Mat(height, width, CvType.CV_8UC4)
+        forward = Mat(height, width, CvType.CV_8UC4)
     }
 
     override fun onCameraViewStopped() {
@@ -60,9 +84,12 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
     override fun onCameraFrame(inputFrame: CameraBridgeViewBase.CvCameraViewFrame?): Mat {
         mRgba = inputFrame!!.rgba()
         // Rotate mRgba 90 degrees
+        /*
         Core.transpose(mRgba, mRgbaT)
         Imgproc.resize(mRgbaT, mRgbaF, mRgbaF.size(), 0.0,0.0, 0)
         Core.flip(mRgbaF, mRgba, 1 )
+        */
+        preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
         return mRgba // This function must return
     }
 
