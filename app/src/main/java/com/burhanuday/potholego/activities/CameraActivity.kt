@@ -1,4 +1,4 @@
-package com.burhanuday.potholego.Activities
+package com.burhanuday.potholego.activities
 
 import android.Manifest
 import android.content.Context
@@ -14,20 +14,15 @@ import android.os.Environment
 import android.os.Handler
 import android.os.HandlerThread
 import android.support.v4.app.ActivityCompat
-import android.support.v4.app.FragmentActivity
-import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.util.Size
 import android.util.SparseIntArray
 import android.view.Surface
-import android.view.SurfaceView
 import android.view.TextureView
 import android.widget.Toast
 import com.burhanuday.potholego.R
 import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.*
-import java.lang.Exception
-import java.nio.ByteBuffer
 import java.util.*
 
 class CameraActivity : AppCompatActivity() {

@@ -1,14 +1,16 @@
 package com.burhanuday.potholego;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
+import android.graphics.*;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
 import org.opencv.android.JavaCameraView;
+import org.opencv.core.Mat;
+import org.opencv.features2d.Params;
 
 import java.io.FileOutputStream;
 import java.util.List;
@@ -22,13 +24,79 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     public static int minWidthQuality = 400;
 
     private Context context;
+    Matrix matrix = new Matrix();
+    private int focusAreaSize = getResources().getDimensionPixelSize(R.dimen.camera_focus_area_size);
 
 
     public OpenCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
+        setWillNotDraw(false);
     }
 
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        //canvas.drawColor(Color.parseColor("#000000"));
+        canvas.drawCircle(getWidth()/2, getHeight()/2, 20f, circlePaint);
+    }
+
+    protected final Paint circlePaint = new Paint();
+
+    /*
+    private Rect calculateTapArea(float x, float y, float coefficient) {
+        int areaSize = Float.valueOf(focusAreaSize * coefficient).intValue();
+
+        int left = clamp((int) x - areaSize / 2, 0, getSurfaceView().getWidth() - areaSize);
+        int top = clamp((int) y - areaSize / 2, 0, getSurfaceView().getHeight() - areaSize);
+
+        RectF rectF = new RectF(left, top, left + areaSize, top + areaSize);
+        matrix.mapRect(rectF);
+
+        return new Rect(Math.round(rectF.left), Math.round(rectF.top), Math.round(rectF.right), Math.round(rectF.bottom));
+    }
+
+    private int clamp(int x, int min, int max) {
+        if (x > max) {
+            return max;
+        }
+        if (x < min) {
+            return min;
+        }
+        return x;
+    }
+
+    protected void focusOnTouch(MotionEvent event) {
+        if (mCamera != null) {
+
+            mCamera.cancelAutoFocus();
+            Rect focusRect = calculateTapArea(event.getX(), event.getY(), 1f);
+            Rect meteringRect = calculateTapArea(event.getX(), event.getY(), 1.5f);
+
+            Camera.Parameters parameters = mCamera.getParameters();
+            parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+            //parameters.setFocusAreas(Lists.newArrayList(new Camera.Area(focusRect, 1000)));
+
+
+           // parameters.setMeteringAreas(Lists.newArrayList(new Camera.Area(meteringRect, 1000)));
+
+            mCamera.setParameters(parameters);
+            mCamera.autoFocus(new Camera.AutoFocusCallback() {
+                @Override
+                public void onAutoFocus(boolean success, Camera camera) {
+
+                }
+            });
+        }
+    }
+
+    private Rect calculateFocusArea(float x, float y) {
+        //int left = clamp(Float.valueOf((x / getSurfaceView().getWidth()) * 2000 - 1000).intValue(), focusAreaSize);
+        //int top = clamp(Float.valueOf((y / getSurfaceView().getHeight()) * 2000 - 1000).intValue(), focusAreaSize);
+
+        //return new Rect(left, top, left + focusAreaSize, top + focusAreaSize);
+    }
+    */
 
     public List<String> getEffectList() {
         return mCamera.getParameters().getSupportedColorEffects();
@@ -76,6 +144,7 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
 
         mCamera.takePicture(null, null, this);
     }
+
 
 
     @Override

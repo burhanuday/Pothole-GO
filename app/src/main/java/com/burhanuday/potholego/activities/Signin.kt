@@ -1,4 +1,4 @@
-package com.burhanuday.potholego.Activities
+package com.burhanuday.potholego.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

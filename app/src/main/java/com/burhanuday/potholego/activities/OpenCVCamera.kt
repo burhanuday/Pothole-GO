@@ -1,9 +1,6 @@
-package com.burhanuday.potholego.Activities
+package com.burhanuday.potholego.activities
 
-import android.hardware.Camera
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.support.v4.app.FragmentActivity
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MenuItem
@@ -13,7 +10,6 @@ import org.opencv.android.CameraBridgeViewBase
 import org.opencv.core.Mat
 import android.view.SurfaceView
 import android.view.View
-import org.opencv.android.JavaCameraView
 import android.view.WindowManager
 import android.widget.Toast
 import com.burhanuday.potholego.OpenCameraView
@@ -24,9 +20,7 @@ import com.burhanuday.potholego.utils.Utilities
 import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
-import org.opencv.core.Core
 import org.opencv.core.CvType
-import org.opencv.imgproc.Imgproc
 import java.io.File
 
 
@@ -38,12 +32,12 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
     private lateinit var mOpenCvCameraView: OpenCameraView
     private var isJavaCamera: Boolean = true
     private lateinit var mItemSwitchCamera: MenuItem
-    lateinit var mRgba:Mat
-    lateinit var mRgbaF:Mat
-    lateinit var mRgbaT:Mat
-    lateinit var des:Mat
-    lateinit var forward:Mat
-    lateinit var preprocessor: ImagePreprocessor
+    private lateinit var mRgba:Mat
+    private lateinit var mRgbaF:Mat
+    private lateinit var mRgbaT:Mat
+    private lateinit var des:Mat
+    private lateinit var forward:Mat
+    private lateinit var preprocessor: ImagePreprocessor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i(TAG, "called onCreate")
@@ -55,6 +49,10 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
         mOpenCvCameraView.disableFpsMeter()
+        mOpenCvCameraView.setMaxFrameSize(1920, 1440)
+        //val sizes: MutableList<Camera.Size>? = mOpenCvCameraView.resolutionList
+        //mOpenCvCameraView.resolution = sizes!![0]
+        //mOpenCvCameraView.setMaxFrameSize()
         preprocessor = ImagePreprocessor()
 
 
@@ -66,6 +64,7 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
             mOpenCvCameraView.takePicture(outPicture)
             Toast.makeText(this@OpenCVCamera, "Picture has been taken ", Toast.LENGTH_LONG).show()
             Log.d(TAG, "Path $outPicture")
+
         }
     }
     override fun onCameraViewStarted(width: Int, height: Int) {
@@ -89,7 +88,8 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         Imgproc.resize(mRgbaT, mRgbaF, mRgbaF.size(), 0.0,0.0, 0)
         Core.flip(mRgbaF, mRgba, 1 )
         */
-        preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
+        //preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
+
         return mRgba // This function must return
     }
 
