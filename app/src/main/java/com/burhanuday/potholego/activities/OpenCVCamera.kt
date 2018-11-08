@@ -21,8 +21,8 @@ import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.CvType
+import org.opencv.imgproc.Imgproc
 import java.io.File
-
 
 /**
  * Created by burhanuday on 05-11-2018.
@@ -35,8 +35,8 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
     private lateinit var mRgba:Mat
     private lateinit var mRgbaF:Mat
     private lateinit var mRgbaT:Mat
-    private lateinit var des:Mat
-    private lateinit var forward:Mat
+    private lateinit var imgGray:Mat
+    private lateinit var imgCanny:Mat
     private lateinit var preprocessor: ImagePreprocessor
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,25 +55,22 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         //mOpenCvCameraView.setMaxFrameSize()
         preprocessor = ImagePreprocessor()
 
-
         //capture button listener
         iv_capture.setOnClickListener{
             val outPicture = Constants.SCAN_IMAGE_LOCATION + File.separator + Utilities.generateFilename()
             FolderUtil.createDefaultFolder(Constants.SCAN_IMAGE_LOCATION)
-
             mOpenCvCameraView.takePicture(outPicture)
             Toast.makeText(this@OpenCVCamera, "Picture has been taken ", Toast.LENGTH_LONG).show()
             Log.d(TAG, "Path $outPicture")
-
         }
     }
+
     override fun onCameraViewStarted(width: Int, height: Int) {
         mRgba = Mat(height, width, CvType.CV_8UC4)
         mRgbaF = Mat(height, width, CvType.CV_8UC4)
         mRgbaT = Mat(width, width, CvType.CV_8UC4)
-
-        des = Mat(height, width, CvType.CV_8UC4)
-        forward = Mat(height, width, CvType.CV_8UC4)
+        imgGray = Mat(height, width, CvType.CV_8UC1)
+        imgCanny = Mat(height, width, CvType.CV_8UC1)
     }
 
     override fun onCameraViewStopped() {
@@ -89,8 +86,10 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         Core.flip(mRgbaF, mRgba, 1 )
         */
         //preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
-
-        return mRgba // This function must return
+        //Imgproc.cvtColor(mRgba, imgGray, Imgproc.COLOR_RGBA2GRAY)
+        //Imgproc.Canny(imgGray, imgCanny, 50.0, 100.0)
+        return mRgba //This function must return
+        //return imgCanny
     }
 
     private val mLoaderCallback = object : BaseLoaderCallback(this) {

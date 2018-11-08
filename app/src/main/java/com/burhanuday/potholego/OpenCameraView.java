@@ -38,7 +38,7 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //canvas.drawColor(Color.parseColor("#000000"));
-        canvas.drawCircle(getWidth()/2, getHeight()/2, 20f, circlePaint);
+        //canvas.drawCircle(getWidth()/2, getHeight()/2, 20f, circlePaint);
     }
 
     protected final Paint circlePaint = new Paint();
@@ -131,17 +131,14 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         connectCamera(getWidth(), getHeight());
     }
 
-
     public Camera.Size getResolution() {
         return mCamera.getParameters().getPreviewSize();
     }
-
 
     public void takePicture(final String fileName) {
         Log.i(TAG, "Taking picture");
         this.mPictureFileName = fileName;
         mCamera.setPreviewCallback(null);
-
         mCamera.takePicture(null, null, this);
     }
 

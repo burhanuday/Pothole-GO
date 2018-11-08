@@ -12,6 +12,7 @@ import android.hardware.camera2.CameraDevice;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.SurfaceHolder;
 import android.view.ViewGroup.LayoutParams;
 
 import org.opencv.BuildConfig;
@@ -39,7 +40,7 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
     private int mChainIdx = 0;
     private Thread mThread;
     private boolean mStopThread;
-
+    private boolean isCameraInitialised = false;
     protected Camera mCamera;
     protected JavaCameraFrame[] mCameraFrame;
     private SurfaceTexture mSurfaceTexture;
@@ -141,6 +142,9 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
                 Camera.Parameters params = mCamera.getParameters();
                 Log.d(TAG, "getSupportedPreviewSizes()");
                 List<android.hardware.Camera.Size> sizes = params.getSupportedPreviewSizes();
+                //isCameraInitialised = true;
+                //float l = params.getFocalLength();
+                //Log.i("focalLength = ", String.valueOf(l));
 
                 if (sizes != null) {
                     /* Select the size that fits surface considering maximum size allowed */
