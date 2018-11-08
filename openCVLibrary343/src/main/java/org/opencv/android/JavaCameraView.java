@@ -154,6 +154,7 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
                     params.setPictureSize(sizes.get(0).width, sizes.get(0).height);
                     params.setPreviewSize(sizes.get(0).width, sizes.get(0).height);
                     params.setJpegQuality(100);
+                    params.setPictureFormat(ImageFormat.JPEG);
 
                     /* Image format NV21 causes issues in the Android emulators */
                     if (Build.FINGERPRINT.startsWith("generic")

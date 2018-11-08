@@ -11,9 +11,10 @@ import org.opencv.core.Mat
 import android.view.SurfaceView
 import android.view.View
 import android.view.WindowManager
+import android.widget.CompoundButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import com.burhanuday.potholego.OpenCameraView
-import com.burhanuday.potholego.preprocess.ImagePreprocessor
 import com.burhanuday.potholego.utils.Constants
 import com.burhanuday.potholego.utils.FolderUtil
 import com.burhanuday.potholego.utils.Utilities
@@ -37,7 +38,6 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
     private lateinit var mRgbaT:Mat
     private lateinit var imgGray:Mat
     private lateinit var imgCanny:Mat
-    private lateinit var preprocessor: ImagePreprocessor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i(TAG, "called onCreate")
@@ -49,11 +49,15 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
         mOpenCvCameraView.disableFpsMeter()
-        mOpenCvCameraView.setMaxFrameSize(1920, 1440)
+        //mOpenCvCameraView.setMaxFrameSize(1920, 1440)
         //val sizes: MutableList<Camera.Size>? = mOpenCvCameraView.resolutionList
         //mOpenCvCameraView.resolution = sizes!![0]
         //mOpenCvCameraView.setMaxFrameSize()
-        preprocessor = ImagePreprocessor()
+
+        //listens to changes when the flash switch is used
+        switch_flash.setOnCheckedChangeListener { buttonView, isChecked ->
+            mOpenCvCameraView.setFlash(isChecked)
+        }
 
         //capture button listener
         iv_capture.setOnClickListener{

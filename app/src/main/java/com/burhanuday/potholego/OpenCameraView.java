@@ -34,6 +34,16 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         setWillNotDraw(false);
     }
 
+    //change value of flash in camera parameters
+    public void setFlash(boolean value){
+        if (value){
+            mCamera.getParameters().setFlashMode(Camera.Parameters.FLASH_MODE_ON);
+        }else {
+            mCamera.getParameters().setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+        }
+    }
+
+    //draw on top of camera preview
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

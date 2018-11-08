@@ -11,5 +11,6 @@ public class Constants {
         //cannot be instantiated
     }
 
+    //URI of default folder where images are saved
     public static final String SCAN_IMAGE_LOCATION = Environment.getExternalStorageDirectory() + File.separator + "OpenScanner";
 }
