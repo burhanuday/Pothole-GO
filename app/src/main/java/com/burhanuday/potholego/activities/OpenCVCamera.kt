@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.CvType
+import org.opencv.core.Size
 import org.opencv.imgproc.Imgproc
 import java.io.File
 
@@ -48,7 +49,7 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView = findViewById<View>(R.id.show_camera_activity_java_surface_view) as OpenCameraView
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
-        mOpenCvCameraView.disableFpsMeter()
+        //mOpenCvCameraView.disableFpsMeter()
         //mOpenCvCameraView.setMaxFrameSize(1920, 1440)
         //val sizes: MutableList<Camera.Size>? = mOpenCvCameraView.resolutionList
         //mOpenCvCameraView.resolution = sizes!![0]
@@ -83,17 +84,18 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     override fun onCameraFrame(inputFrame: CameraBridgeViewBase.CvCameraViewFrame?): Mat {
         mRgba = inputFrame!!.rgba()
-        // Rotate mRgba 90 degrees
-        /*
-        Core.transpose(mRgba, mRgbaT)
-        Imgproc.resize(mRgbaT, mRgbaF, mRgbaF.size(), 0.0,0.0, 0)
-        Core.flip(mRgbaF, mRgba, 1 )
-        */
         //preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
-        //Imgproc.cvtColor(mRgba, imgGray, Imgproc.COLOR_RGBA2GRAY)
-        //Imgproc.Canny(imgGray, imgCanny, 50.0, 100.0)
-        return mRgba //This function must return
-        //return imgCanny
+        Imgproc.cvtColor(mRgba, imgGray, Imgproc.COLOR_RGBA2GRAY)
+        val s = Size(5.0, 5.0)
+        Imgproc.GaussianBlur(imgGray, imgGray, s, 0.0)
+        Imgproc.medianBlur(imgGray, imgGray, 5)
+        val mat: Mat = Mat.ones(Size(5.0,5.0), 5)
+        Imgproc.erode(imgGray, imgGray, mat)
+        Imgproc.dilate(imgGray, imgGray, mat)
+        Imgproc.morphologyEx(imgGray, imgGray, Imgproc.MORPH_CLOSE, mat)
+        Imgproc.Canny(imgGray, imgCanny, 9.0, 220.0)
+        //return mRgba //This function must return
+        return imgCanny
     }
 
     private val mLoaderCallback = object : BaseLoaderCallback(this) {
