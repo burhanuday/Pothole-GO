@@ -8,15 +8,28 @@
         tools:context=".activities.MainActivity">
 
     <android.support.design.widget.FloatingActionButton
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:clickable="true"
-            app:srcCompat="@drawable/ic_photo_camera_white_24dp"
-            android:id="@+id/fab_new_picture"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:focusable="true"
-            android:onClick="fabClicked"/>
+        android:id="@+id/fab_locate_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fab_new_pothole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_my_location_black_24dp"
+        android:focusable="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_new_pothole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_photo_camera_white_24dp" />
 </android.support.constraint.ConstraintLayout>

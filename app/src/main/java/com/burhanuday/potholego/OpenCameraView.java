@@ -49,9 +49,13 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         super.onDraw(canvas);
         //canvas.drawColor(Color.parseColor("#000000"));
         //canvas.drawCircle(getWidth()/2, getHeight()/2, 20f, circlePaint);
+        circleDraw.setStyle(Paint.Style.STROKE);
+        circleDraw.setColor(getResources().getColor(R.color.colorPrimary));
+        circleDraw.setStrokeWidth(12f);
+        canvas.drawCircle(getWidth()/2, getHeight()/2, 300f, circleDraw);
     }
 
-    protected final Paint circlePaint = new Paint();
+    protected final Paint circleDraw = new Paint();
 
     /*
     private Rect calculateTapArea(float x, float y, float coefficient) {

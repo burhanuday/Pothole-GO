@@ -49,6 +49,7 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView = findViewById<View>(R.id.show_camera_activity_java_surface_view) as OpenCameraView
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
+        mOpenCvCameraView.enableFpsMeter()
         //mOpenCvCameraView.disableFpsMeter()
         //mOpenCvCameraView.setMaxFrameSize(1920, 1440)
         //val sizes: MutableList<Camera.Size>? = mOpenCvCameraView.resolutionList
@@ -72,10 +73,12 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     override fun onCameraViewStarted(width: Int, height: Int) {
         mRgba = Mat(height, width, CvType.CV_8UC4)
+        /*
         mRgbaF = Mat(height, width, CvType.CV_8UC4)
         mRgbaT = Mat(width, width, CvType.CV_8UC4)
         imgGray = Mat(height, width, CvType.CV_8UC1)
         imgCanny = Mat(height, width, CvType.CV_8UC1)
+        */
     }
 
     override fun onCameraViewStopped() {
@@ -85,6 +88,7 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
     override fun onCameraFrame(inputFrame: CameraBridgeViewBase.CvCameraViewFrame?): Mat {
         mRgba = inputFrame!!.rgba()
         //preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
+        /*
         Imgproc.cvtColor(mRgba, imgGray, Imgproc.COLOR_RGBA2GRAY)
         val s = Size(5.0, 5.0)
         Imgproc.GaussianBlur(imgGray, imgGray, s, 0.0)
@@ -96,6 +100,8 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         Imgproc.Canny(imgGray, imgCanny, 9.0, 220.0)
         //return mRgba //This function must return
         return imgCanny
+        */
+        return mRgba
     }
 
     private val mLoaderCallback = object : BaseLoaderCallback(this) {

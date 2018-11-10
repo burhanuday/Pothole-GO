@@ -9,6 +9,8 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.view.View
 import com.burhanuday.potholego.R
+import com.burhanuday.potholego.utils.Constants
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,18 +20,22 @@ class MainActivity : AppCompatActivity() {
 
         //ask user for CAMERA and WRITE_EXTERNAL_STORAGE permissions
         checkRequiredPermissions()
-    }
 
-    //handle fab button click
-    //open camera
-    fun fabClicked(view: View){
-        val openCamera = Intent(this, OpenCVCamera::class.java)
-        startActivity(openCamera)
+        fab_new_pothole.setOnClickListener{
+            //open camera to report new pothole
+            val openCamera = Intent(this, OpenCVCamera::class.java)
+            startActivity(openCamera)
+        }
+
+        fab_locate_me.setOnClickListener{
+            //handle locate user function on map
+        }
     }
 
     private fun checkRequiredPermissions(){
-        if (ContextCompat.checkSelfPermission(baseContext, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), 123)
+        if (ContextCompat.checkSelfPermission(baseContext, Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(baseContext, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), Constants.PERMISSION_REQUEST_CODE)
         }
     }
 }

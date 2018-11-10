@@ -1,7 +1,12 @@
 package com.burhanuday.potholego.utils;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 
