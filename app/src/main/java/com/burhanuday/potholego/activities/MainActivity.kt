@@ -10,16 +10,40 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import com.burhanuday.potholego.R
 import com.burhanuday.potholego.utils.Constants
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+/**
+ * Created by Burhanuddin on 27-10-2018.
+ */
+
+class MainActivity : AppCompatActivity(), OnMapReadyCallback {
+    val SYDNEY = LatLng(-33.862, 151.21)
+    val MUMBAI = LatLng(19.0760, 72.8777)
+    val ZOOM_LEVEL = 13f
+
+    override fun onMapReady(googleMap: GoogleMap?) {
+        googleMap ?: return
+        with(googleMap) {
+            moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(MUMBAI, ZOOM_LEVEL))
+            addMarker(com.google.android.gms.maps.model.MarkerOptions().position(MUMBAI))
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar!!.hide()
 
         //ask user for CAMERA and WRITE_EXTERNAL_STORAGE permissions
         checkRequiredPermissions()
+
+        val mapFragment : SupportMapFragment? =
+            supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
 
         fab_new_pothole.setOnClickListener{
             //open camera to report new pothole

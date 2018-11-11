@@ -25,6 +25,10 @@ import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.*
 import java.util.*
 
+/**
+ * Created by Burhanuddin on 27-10-2018.
+ */
+
 class CameraActivity : AppCompatActivity() {
 
     private val TAG: String = "AndroidCameraAPI"

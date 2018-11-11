@@ -15,6 +15,10 @@ import org.opencv.features2d.Params;
 import java.io.FileOutputStream;
 import java.util.List;
 
+/**
+ * Created by Burhanuddin on 4-11-2018.
+ */
+
 public class OpenCameraView extends JavaCameraView implements Camera.PictureCallback {
 
     private static final String TAG = OpenCameraView.class.getSimpleName();
