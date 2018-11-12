@@ -16,14 +16,15 @@ interface RESTApi {
 
     //https://medium.com/@adinugroho/upload-image-from-android-app-using-retrofit-2-ae6f922b184c
     @Multipart
-    @POST
+    @POST("/")
     fun postPothole():Call<Pothole>
 
-    @GET
+    @GET("potholes")
     fun getAll():Call<List<Pothole>>
 
     companion object {
-        fun create(baseURL: String): RESTApi{
+        val baseURL:String = "https://fierce-thicket-79271.herokuapp.com/api/v1/"
+        fun create(): RESTApi{
             val retrofit = Retrofit.Builder().baseUrl(baseURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

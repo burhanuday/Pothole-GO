@@ -30,7 +30,6 @@ import java.util.*
  */
 
 class CameraActivity : AppCompatActivity() {
-
     private val TAG: String = "AndroidCameraAPI"
     private lateinit var cameraID: String
     val ORIENTATIONS: SparseIntArray = SparseIntArray()
