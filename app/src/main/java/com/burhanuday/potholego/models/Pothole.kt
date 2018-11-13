@@ -26,4 +26,9 @@ class Pothole{
         var original = arrayOf<String>()
         var processed = arrayOf<String>()
     }
+
+    class ImagePhotos{
+        var original = arrayOf<Bitmap>()
+        var processed = arrayOf<Bitmap>()
+    }
 }

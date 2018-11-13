@@ -1,4 +1,4 @@
-package com.burhanuday.potholego;
+package com.burhanuday.potholego.utils;
 
 import android.content.Context;
 import android.graphics.*;
@@ -6,11 +6,8 @@ import android.hardware.Camera;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.SurfaceHolder;
+import com.burhanuday.potholego.R;
 import org.opencv.android.JavaCameraView;
-import org.opencv.core.Mat;
-import org.opencv.features2d.Params;
 
 import java.io.FileOutputStream;
 import java.util.List;

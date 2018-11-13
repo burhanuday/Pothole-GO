@@ -4,18 +4,28 @@
 
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <uses-feature android:name="android.hardware.camera2.full"/>
-    <uses-feature android:name="android.hardware.camera" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.camera.autofocus"
+            android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.camera.front"
+            android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.camera.front.autofocus"
+            android:required="false"/>
 
-    <supports-screens android:resizeable="true"
-                      android:smallScreens="true"
-                      android:normalScreens="true"
-                      android:largeScreens="true"
-                      android:anyDensity="true" />
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:resizeable="true"
+            android:smallScreens="true"/>
 
     <application
             android:allowBackup="true"
@@ -47,14 +57,20 @@
 
         <activity android:name=".activities.CameraActivity">
         </activity>
-
-        <activity android:name=".activities.OpenCVCamera"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".activities.OpenCVCamera"
+                android:screenOrientation="portrait">
         </activity>
 
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="@string/google_maps_api_key" />
+                android:value="@string/google_maps_api_key"/>
+
+        <service
+                android:name=".utils.LocationService"
+                android:enabled="true"
+                android:exported="false">
+        </service>
     </application>
 
 </manifest>

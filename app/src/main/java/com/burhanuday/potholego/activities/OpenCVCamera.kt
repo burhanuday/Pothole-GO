@@ -11,10 +11,8 @@ import org.opencv.core.Mat
 import android.view.SurfaceView
 import android.view.View
 import android.view.WindowManager
-import android.widget.CompoundButton
-import android.widget.RadioGroup
 import android.widget.Toast
-import com.burhanuday.potholego.OpenCameraView
+import com.burhanuday.potholego.utils.OpenCameraView
 import com.burhanuday.potholego.utils.Constants
 import com.burhanuday.potholego.utils.FolderUtil
 import com.burhanuday.potholego.utils.Utilities
@@ -22,8 +20,6 @@ import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.CvType
-import org.opencv.core.Size
-import org.opencv.imgproc.Imgproc
 import java.io.File
 
 /**
