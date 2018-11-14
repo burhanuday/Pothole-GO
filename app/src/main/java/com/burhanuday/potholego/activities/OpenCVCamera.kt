@@ -62,7 +62,6 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
             val outPicture = Constants.SCAN_IMAGE_LOCATION + File.separator + Utilities.generateFilename()
             FolderUtil.createDefaultFolder(Constants.SCAN_IMAGE_LOCATION)
             mOpenCvCameraView.takePicture(outPicture)
-            Toast.makeText(this@OpenCVCamera, "Picture has been taken ", Toast.LENGTH_LONG).show()
             Log.d(TAG, "Path $outPicture")
         }
     }

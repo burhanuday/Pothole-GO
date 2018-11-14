@@ -18,7 +18,7 @@ public class FolderUtil {
     }
 
 
-    public boolean checkIfFileExist(String filePath){
+    public static boolean checkIfFileExist(String filePath){
         File file = new File(filePath);
         return file.exists();
     }

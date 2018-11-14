@@ -4,13 +4,27 @@ import android.content.Context;
 import android.graphics.*;
 import android.hardware.Camera;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.widget.Toast;
 import com.burhanuday.potholego.R;
+import com.burhanuday.potholego.RESTApi;
+import com.burhanuday.potholego.models.LocationHolder;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import org.opencv.android.JavaCameraView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
+import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Burhanuddin on 4-11-2018.
@@ -28,6 +42,8 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     Matrix matrix = new Matrix();
     private int focusAreaSize = getResources().getDimensionPixelSize(R.dimen.camera_focus_area_size);
 
+    public boolean firstTaken = false;
+    String first, second;
 
     public OpenCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -57,61 +73,6 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     }
 
     protected final Paint circleDraw = new Paint();
-
-    /*
-    private Rect calculateTapArea(float x, float y, float coefficient) {
-        int areaSize = Float.valueOf(focusAreaSize * coefficient).intValue();
-
-        int left = clamp((int) x - areaSize / 2, 0, getSurfaceView().getWidth() - areaSize);
-        int top = clamp((int) y - areaSize / 2, 0, getSurfaceView().getHeight() - areaSize);
-
-        RectF rectF = new RectF(left, top, left + areaSize, top + areaSize);
-        matrix.mapRect(rectF);
-
-        return new Rect(Math.round(rectF.left), Math.round(rectF.top), Math.round(rectF.right), Math.round(rectF.bottom));
-    }
-
-    private int clamp(int x, int min, int max) {
-        if (x > max) {
-            return max;
-        }
-        if (x < min) {
-            return min;
-        }
-        return x;
-    }
-
-    protected void focusOnTouch(MotionEvent event) {
-        if (mCamera != null) {
-
-            mCamera.cancelAutoFocus();
-            Rect focusRect = calculateTapArea(event.getX(), event.getY(), 1f);
-            Rect meteringRect = calculateTapArea(event.getX(), event.getY(), 1.5f);
-
-            Camera.Parameters parameters = mCamera.getParameters();
-            parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
-            //parameters.setFocusAreas(Lists.newArrayList(new Camera.Area(focusRect, 1000)));
-
-
-           // parameters.setMeteringAreas(Lists.newArrayList(new Camera.Area(meteringRect, 1000)));
-
-            mCamera.setParameters(parameters);
-            mCamera.autoFocus(new Camera.AutoFocusCallback() {
-                @Override
-                public void onAutoFocus(boolean success, Camera camera) {
-
-                }
-            });
-        }
-    }
-
-    private Rect calculateFocusArea(float x, float y) {
-        //int left = clamp(Float.valueOf((x / getSurfaceView().getWidth()) * 2000 - 1000).intValue(), focusAreaSize);
-        //int top = clamp(Float.valueOf((y / getSurfaceView().getHeight()) * 2000 - 1000).intValue(), focusAreaSize);
-
-        //return new Rect(left, top, left + focusAreaSize, top + focusAreaSize);
-    }
-    */
 
     public List<String> getEffectList() {
         return mCamera.getParameters().getSupportedColorEffects();
@@ -170,8 +131,7 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         Uri uri = Uri.parse(mPictureFileName);
 
         Log.d(TAG, "selectedImage: " + uri);
-        Bitmap bm = null;
-        bm = rotate(bitmap, 90);
+        Bitmap bm = rotate(bitmap, 90);
 
         // Write the image in a file (in jpeg format)
         try {
@@ -181,6 +141,17 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
 
         } catch (java.io.IOException e) {
             Log.e("PictureDemo", "Exception in photoCallback", e);
+        }
+
+        if (!firstTaken){
+            first = mPictureFileName;
+            //Toast.makeText(context, "first taken", Toast.LENGTH_SHORT).show();
+            firstTaken = true;
+        }else{
+            second = mPictureFileName;
+            //Toast.makeText(context, "second taken", Toast.LENGTH_SHORT).show();
+            firstTaken = false;
+            sendMultipleParts();
         }
     }
 
@@ -193,5 +164,36 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
             return bmOut;
         }
         return bm;
+    }
+
+    private void sendMultipleParts(){
+        List<MultipartBody.Part> parts = new ArrayList<>();
+        parts.add(prepareFilePart("images", first));
+        parts.add(prepareFilePart("images", second));
+        RESTApi restApi = RESTApi.Companion.create();
+
+        RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
+        RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
+        Call<ResponseBody> req = restApi.postPothole(parts, lat, lng);
+        req.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
+                Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private MultipartBody.Part prepareFilePart(String partName, String path){
+        if (!FolderUtil.checkIfFileExist(path)){
+            Toast.makeText(context, "ERROR GETTING FILE: DOES NOT EXIST", Toast.LENGTH_SHORT).show();
+        }
+        File file = new File(path);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("image/jpg"), file);
+        return MultipartBody.Part.createFormData(partName, file.getName(), requestBody);
     }
 }

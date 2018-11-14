@@ -21,8 +21,7 @@ interface RESTApi {
     //https://medium.com/@adinugroho/upload-image-from-android-app-using-retrofit-2-ae6f922b184c
     @Multipart
     @POST("create")
-    fun postPothole(@Part original1: MultipartBody.Part,
-                    @Part original2: MultipartBody.Part,
+    fun postPothole(@Part images: List<MultipartBody.Part>,
                     @Part("lat") latitude:RequestBody,
                     @Part("lng") longitude:RequestBody):Call<ResponseBody>
 
