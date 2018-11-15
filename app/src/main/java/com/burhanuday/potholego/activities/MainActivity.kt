@@ -31,17 +31,20 @@ import retrofit2.Response
  */
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
-    val MUMBAI = LatLng(19.0760, 72.8777)
-    val ZOOM_LEVEL = 15f
-    val MINIMUM_ACCURACY = 30
+    private val MUMBAI = LatLng(19.0760, 72.8777)
+    private val ZOOM_LEVEL = 15f
+    private val MINIMUM_ACCURACY = 60
     var restApi: RESTApi? = null
-    var mapReady:Boolean = false
+    private var mapReady:Boolean = false
     var googleMap: GoogleMap? = null
     var lastKnownLocation: Location?=null
-
+    private var potholeQuerySent = false
     var didInitialZoom: Boolean = false
     var reachedMinimumAccuracy:Boolean = false
 
+    /**
+     *  Callback for when map is ready
+     */
     @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap?) {
         this.googleMap = googleMap
@@ -55,15 +58,19 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             override fun onMyLocationChange(location: Location?) {
                 //Toast.makeText(this@MainActivity, "You are at ${location.toString()}", Toast.LENGTH_SHORT).show()
                 LocationHolder.LATITUDE = location!!.latitude.toString()
-                LocationHolder.LONGITUDE = location!!.longitude.toString()
-                if (location!!.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
-                    //Toast.makeText(baseContext, "REACHED MIN", Toast.LENGTH_SHORT).show()
+                LocationHolder.LONGITUDE = location.longitude.toString()
+                if (location.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
+                    Toast.makeText(baseContext, "You are at $location", Toast.LENGTH_SHORT).show()
                     lastKnownLocation = location
                     reachedMinimumAccuracy = true
+                    if (!potholeQuerySent){
+                        getNearbyPotholes(location)
+                        potholeQuerySent = true
+                    }
 
                 }
                 if (!didInitialZoom){
-                    val latLng:LatLng = LatLng(location.latitude, location.longitude)
+                    val latLng = LatLng(location.latitude, location.longitude)
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, ZOOM_LEVEL))
                     didInitialZoom = true
                 }
@@ -79,46 +86,60 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
 
-        //ask user for CAMERA, LOCATION and WRITE_EXTERNAL_STORAGE permissions
+        /**
+         * ask user for CAMERA, LOCATION and WRITE_EXTERNAL_STORAGE permissions
+         */
         checkRequiredPermissions()
 
         val mapFragment : SupportMapFragment? =
             supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mapFragment?.getMapAsync(this)
 
+        /**
+         * Open camera to report new pothole
+         */
         fab_new_pothole.setOnClickListener{
-            //open camera to report new pothole
             val openCamera = Intent(this, OpenCVCamera::class.java)
             startActivity(openCamera)
         }
 
+        /**
+         * create instance of api
+         */
         restApi = RESTApi.create()
-        val call: Call<List<Pothole>>? = restApi?.getAll()
+
+    }
+
+    private fun getNearbyPotholes(location: Location){
+        val call: Call<List<Pothole>>? = restApi?.getNearbyPotholes(location.latitude, location.longitude)
         call!!.enqueue(object : Callback<List<Pothole>>{
             override fun onFailure(call: Call<List<Pothole>>, t: Throwable) {
                 Log.i("RESPONSE", t.message)
-                Toast.makeText(this@MainActivity,
-                    "There was an error retrieving the data: " + t.message,
-                    Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "There was an error retrieving the data: " + t.message, Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<List<Pothole>>, response: Response<List<Pothole>>) {
                 val potholeList: List<Pothole>? = response.body()
-                if (mapReady) {
-                    for (pothole in potholeList!!) {
-                        googleMap!!.addMarker(
-                            com.google.android.gms.maps.model.MarkerOptions().position(
-                                LatLng(
-                                    pothole.location!!.lat!!,
-                                    pothole.location!!.lng!!
-                                )
-                            )
-                        )
-                    }
+                if (potholeList!=null){
+                    addMarkersOnMap(potholeList)
+                }else{
+                    Log.d("MAINACTIVITY", "pothole list empty")
                 }
+
             }
 
         })
+    }
+
+    /**
+     * drop pins wherever potholes are located
+     */
+    private fun addMarkersOnMap(markers: List<Pothole>){
+        if (mapReady) {
+            for (pothole in markers) {
+                googleMap!!.addMarker(MarkerOptions().position(LatLng(pothole.location!!.lat!!, pothole.location!!.lng!!)))
+            }
+        }
     }
 
 

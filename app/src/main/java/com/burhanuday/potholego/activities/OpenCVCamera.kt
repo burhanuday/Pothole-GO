@@ -28,13 +28,7 @@ import java.io.File
 class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListener2 {
     val TAG = "OPENCVCAMERA"
     private lateinit var mOpenCvCameraView: OpenCameraView
-    private var isJavaCamera: Boolean = true
-    private lateinit var mItemSwitchCamera: MenuItem
     private lateinit var mRgba:Mat
-    private lateinit var mRgbaF:Mat
-    private lateinit var mRgbaT:Mat
-    private lateinit var imgGray:Mat
-    private lateinit var imgCanny:Mat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i(TAG, "called onCreate")
@@ -46,19 +40,19 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
         mOpenCvCameraView.enableFpsMeter()
-        //mOpenCvCameraView.disableFpsMeter()
-        //mOpenCvCameraView.setMaxFrameSize(1920, 1440)
-        //val sizes: MutableList<Camera.Size>? = mOpenCvCameraView.resolutionList
-        //mOpenCvCameraView.resolution = sizes!![0]
-        //mOpenCvCameraView.setMaxFrameSize()
 
-        //listens to changes when the flash switch is used
+
+        /**
+         * listens to changes when the flash button is pressed
+         */
         switch_flash.setOnCheckedChangeListener { buttonView, isChecked ->
             mOpenCvCameraView.setFlash(isChecked)
         }
 
-        //capture button listener
-        iv_capture.setOnClickListener{
+        /**
+         * capture image when the capture button is pressed
+         */
+        fab_capture.setOnClickListener{
             val outPicture = Constants.SCAN_IMAGE_LOCATION + File.separator + Utilities.generateFilename()
             FolderUtil.createDefaultFolder(Constants.SCAN_IMAGE_LOCATION)
             mOpenCvCameraView.takePicture(outPicture)
@@ -68,12 +62,6 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     override fun onCameraViewStarted(width: Int, height: Int) {
         mRgba = Mat(height, width, CvType.CV_8UC4)
-        /*
-        mRgbaF = Mat(height, width, CvType.CV_8UC4)
-        mRgbaT = Mat(width, width, CvType.CV_8UC4)
-        imgGray = Mat(height, width, CvType.CV_8UC1)
-        imgCanny = Mat(height, width, CvType.CV_8UC1)
-        */
     }
 
     override fun onCameraViewStopped() {
@@ -82,20 +70,6 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     override fun onCameraFrame(inputFrame: CameraBridgeViewBase.CvCameraViewFrame?): Mat {
         mRgba = inputFrame!!.rgba()
-        //preprocessor.changeImagePreviewOrientation(mRgba, des, forward)
-        /*
-        Imgproc.cvtColor(mRgba, imgGray, Imgproc.COLOR_RGBA2GRAY)
-        val s = Size(5.0, 5.0)
-        Imgproc.GaussianBlur(imgGray, imgGray, s, 0.0)
-        Imgproc.medianBlur(imgGray, imgGray, 5)
-        val mat: Mat = Mat.ones(Size(5.0,5.0), 5)
-        Imgproc.erode(imgGray, imgGray, mat)
-        Imgproc.dilate(imgGray, imgGray, mat)
-        Imgproc.morphologyEx(imgGray, imgGray, Imgproc.MORPH_CLOSE, mat)
-        Imgproc.Canny(imgGray, imgCanny, 9.0, 220.0)
-        //return mRgba //This function must return
-        return imgCanny
-        */
         return mRgba
     }
 
@@ -115,10 +89,12 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     public override fun onPause() {
         super.onPause()
-        if (mOpenCvCameraView != null)
-            mOpenCvCameraView.disableView()
+        mOpenCvCameraView.disableView()
     }
 
+    /**
+     * Look for internet OPENCV library or else use OPENCV MANAGER
+     */
     public override fun onResume() {
         super.onResume()
         if (!OpenCVLoader.initDebug()) {
@@ -132,7 +108,6 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
 
     public override fun onDestroy() {
         super.onDestroy()
-        if (mOpenCvCameraView != null)
-            mOpenCvCameraView.disableView()
+        mOpenCvCameraView.disableView()
     }
 }

@@ -7,10 +7,7 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
+import retrofit2.http.*
 
 /**
  * Created by Burhanuddin on 27-10-2018.
@@ -27,6 +24,9 @@ interface RESTApi {
 
     @GET("potholes")
     fun getAll():Call<List<Pothole>>
+
+    @GET("potholes")
+    fun getNearbyPotholes(@Query("lat") latitude:Double, @Query("lng") longitude:Double):Call<List<Pothole>>
 
     companion object {
         val baseURL:String = "https://fierce-thicket-79271.herokuapp.com/api/v1/"

@@ -31,27 +31,26 @@ import java.util.Objects;
  */
 
 public class OpenCameraView extends JavaCameraView implements Camera.PictureCallback {
-
     private static final String TAG = OpenCameraView.class.getSimpleName();
-
     private String mPictureFileName;
-
-    public static int minWidthQuality = 400;
-
     private Context context;
-    Matrix matrix = new Matrix();
-    private int focusAreaSize = getResources().getDimensionPixelSize(R.dimen.camera_focus_area_size);
-
     public boolean firstTaken = false;
     String first, second;
 
+    /**
+     * setWillNotDraw has to be set to false to draw on camera preview
+     */
     public OpenCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
+
         setWillNotDraw(false);
     }
 
-    //change value of flash in camera parameters
+    /**
+     * change value of flash parameter in camera characteristics
+     * @param value
+     */
     public void setFlash(boolean value){
         if (value){
             mCamera.getParameters().setFlashMode(Camera.Parameters.FLASH_MODE_ON);
@@ -60,7 +59,10 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         }
     }
 
-    //draw on top of camera preview
+    /**
+     * draw on top of OPENCV camera preview
+     * @param canvas
+     */
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
