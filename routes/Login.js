@@ -4,7 +4,7 @@ const UserModel = require("../model/User");
 
 // Check if the user already exists in the database. If not, create a document and release a new token. Else, just release a new token
 router.post("/login", (req, res) => {
-  //   console.log(req.query);
+    console.log(req.query);
 
   let user = {
     username: req.query.username,
@@ -17,6 +17,7 @@ router.post("/login", (req, res) => {
   })
     .then(user => {
       if (user) {
+        console.log("existing user")
         jwt.sign(
           { user },
           "secretkey",
@@ -38,6 +39,7 @@ router.post("/login", (req, res) => {
         newUser
           .save()
           .then(success => {
+            console.log("new user")
             jwt.sign(
               { user },
               "secretkey",
