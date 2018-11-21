@@ -1,6 +1,7 @@
 package com.burhanuday.potholego.utils;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.*;
 import android.hardware.Camera;
 import android.net.Uri;
@@ -8,8 +9,9 @@ import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.Toast;
+import com.burhanuday.potholego.ApiClient;
+import com.burhanuday.potholego.ApiService;
 import com.burhanuday.potholego.R;
-import com.burhanuday.potholego.RESTApi;
 import com.burhanuday.potholego.models.LocationHolder;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -172,11 +174,13 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         List<MultipartBody.Part> parts = new ArrayList<>();
         parts.add(prepareFilePart("images", first));
         parts.add(prepareFilePart("images", second));
-        RESTApi restApi = RESTApi.Companion.create();
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
+        String token = sharedPreferences.getString("token", "");
+        ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
 
         RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
         RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
-        Call<ResponseBody> req = restApi.postPothole(parts, lat, lng);
+        Call<ResponseBody> req = apiService.postPothole(parts, lat, lng);
         req.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {

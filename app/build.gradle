@@ -39,8 +39,11 @@ dependencies {
     implementation project(':openCVLibrary343')
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
 
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //authentication
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    //okhttp
+    implementation "com.squareup.okhttp3:okhttp:3.10.0"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:3.0.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.4.1"
 }

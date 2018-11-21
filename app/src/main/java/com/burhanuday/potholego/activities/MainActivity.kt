@@ -1,21 +1,17 @@
 package com.burhanuday.potholego.activities
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.content.*
-import android.content.pm.PackageManager
 import android.location.Location
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.widget.Toast
+import com.burhanuday.potholego.ApiClient
+import com.burhanuday.potholego.ApiService
 import com.burhanuday.potholego.R
-import com.burhanuday.potholego.RESTApi
 import com.burhanuday.potholego.models.LocationHolder
 import com.burhanuday.potholego.models.Pothole
-import com.burhanuday.potholego.utils.Constants
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -31,10 +27,10 @@ import retrofit2.Response
  */
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
-    private val MUMBAI = LatLng(19.0760, 72.8777)
     private val ZOOM_LEVEL = 15f
     private val MINIMUM_ACCURACY = 60
-    var restApi: RESTApi? = null
+    //var restApi: RESTApi? = null
+    private var apiService:ApiService? = null
     private var mapReady:Boolean = false
     var googleMap: GoogleMap? = null
     var lastKnownLocation: Location?=null
@@ -56,7 +52,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mapReady = true
         googleMap.setOnMyLocationChangeListener(object : GoogleMap.OnMyLocationChangeListener{
             override fun onMyLocationChange(location: Location?) {
-                //Toast.makeText(this@MainActivity, "You are at ${location.toString()}", Toast.LENGTH_SHORT).show()
                 LocationHolder.LATITUDE = location!!.latitude.toString()
                 LocationHolder.LONGITUDE = location.longitude.toString()
                 if (location.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
@@ -101,12 +96,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         /**
          * create instance of api
          */
-        restApi = RESTApi.create()
+        val sharedPreferences = getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE)
+        val token = sharedPreferences.getString("token", "")
+        Log.i("mainactivity", token)
+        apiService = ApiClient.getInstance(token).create(ApiService::class.java)
 
     }
 
     private fun getNearbyPotholes(location: Location){
-        val call: Call<List<Pothole>>? = restApi?.getNearbyPotholes(location.latitude, location.longitude)
+        val call: Call<List<Pothole>>? = apiService?.getNearbyPotholes(location.latitude, location.longitude)
         call!!.enqueue(object : Callback<List<Pothole>>{
             override fun onFailure(call: Call<List<Pothole>>, t: Throwable) {
                 Log.i("RESPONSE", t.message)
