@@ -3,7 +3,7 @@ function verifyToken(req, res, next) {
   if (typeof bearerHeader !== "undefined") {
     const bearer = bearerHeader.split(" ");
     console.log(bearer)
-    const bearerToken = bearer[1];
+    const bearerToken = bearer[0];
     console.log(bearerToken);
     req.token = bearerToken;
     next();
