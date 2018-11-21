@@ -21,12 +21,12 @@ router.post("/login", (req, res) => {
         jwt.sign(
           { user },
           "secretkey",
-          { expiresIn: "86400s" },
+          { expiresIn: "365d" },
           (err, token) => {
             res.json({
               success: 2,
               user: user,
-              token
+              token: token
             });
           }
         );
@@ -43,12 +43,12 @@ router.post("/login", (req, res) => {
             jwt.sign(
               { user },
               "secretkey",
-              { expiresIn: "86400s" },
+              { expiresIn: "365d" },
               (err, token) => {
                 res.json({
                   success: 1,
                   user: user,
-                  token
+                  token: token
                 });
               }
             );
