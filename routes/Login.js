@@ -25,7 +25,6 @@ router.post("/login", (req, res) => {
           (err, token) => {
             res.json({
               success: 2,
-              user: user,
               token: token
             });
           }
@@ -47,7 +46,6 @@ router.post("/login", (req, res) => {
               (err, token) => {
                 res.json({
                   success: 1,
-                  user: user,
                   token: token
                 });
               }
