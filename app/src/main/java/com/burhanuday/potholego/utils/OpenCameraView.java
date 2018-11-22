@@ -1,5 +1,7 @@
 package com.burhanuday.potholego.utils;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.*;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 import com.burhanuday.potholego.ApiClient;
 import com.burhanuday.potholego.ApiService;
 import com.burhanuday.potholego.R;
+import com.burhanuday.potholego.activities.OpenCVCamera;
 import com.burhanuday.potholego.models.LocationHolder;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -38,6 +41,8 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     private Context context;
     public boolean firstTaken = false;
     String first, second;
+    private OpenCVCamera activity;
+    private ProgressDialog mProgressDialog = null;
 
     /**
      * setWillNotDraw has to be set to false to draw on camera preview
@@ -45,8 +50,11 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     public OpenCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
-
         setWillNotDraw(false);
+    }
+
+    public void setCallingActivity(Context context){
+        this.activity = (OpenCVCamera)context;
     }
 
     /**
@@ -171,13 +179,13 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
     }
 
     private void sendMultipleParts(){
+        showProgressDialog();
         List<MultipartBody.Part> parts = new ArrayList<>();
         parts.add(prepareFilePart("images", first));
         parts.add(prepareFilePart("images", second));
         SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
         String token = sharedPreferences.getString("token", "");
         ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
-
         RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
         RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
         Call<ResponseBody> req = apiService.postPothole(parts, lat, lng);
@@ -185,11 +193,15 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
             @Override
             public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
                 Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show();
+                hideProgressDialog();
+                activity.finish();
             }
 
             @Override
             public void onFailure(@NonNull Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
+                hideProgressDialog();
+                activity.finish();
             }
         });
     }
@@ -201,5 +213,18 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         File file = new File(path);
         RequestBody requestBody = RequestBody.create(MediaType.parse("image/jpg"), file);
         return MultipartBody.Part.createFormData(partName, file.getName(), requestBody);
+    }
+
+    private void showProgressDialog(){
+        if (mProgressDialog == null){
+            mProgressDialog = ProgressDialog.show(context, "Uploading", "Sending data...", true);
+        }
+        mProgressDialog.show();
+    }
+
+    private void hideProgressDialog(){
+        if (mProgressDialog!=null && mProgressDialog.isShowing()){
+            mProgressDialog.hide();
+        }
     }
 }

@@ -115,6 +115,7 @@ class Signin : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
     private fun handleSignInResult(result: GoogleSignInResult) {
         if (result.isSuccess) {
+            showProgressDialog()
             val acct: GoogleSignInAccount = result.signInAccount!!
             val personName = acct.displayName
             val email = acct.email
@@ -124,10 +125,12 @@ class Signin : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
                 override fun onFailure(call: Call<User>, t: Throwable) {
                     Log.i("signin", "Error: " + t.message)
                     Log.i("signin", "failed")
+                    hideProgressDialog()
                 }
 
                 override fun onResponse(call: Call<User>, response: Response<User>) {
                     Log.i("signin", "success")
+                    hideProgressDialog()
                     val user: User? = response.body()
                     Log.i("signin", response.body().toString())
                     if (user?.status != 0){
@@ -145,6 +148,7 @@ class Signin : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
         Log.i("signin", "UpdateUI" + signedIn.toString())
         if (signedIn){
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 

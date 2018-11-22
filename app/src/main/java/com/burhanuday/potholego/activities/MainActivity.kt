@@ -1,6 +1,7 @@
 package com.burhanuday.potholego.activities
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.*
 import android.location.Location
 import android.support.v7.app.AppCompatActivity
@@ -28,15 +29,15 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private val ZOOM_LEVEL = 15f
-    private val MINIMUM_ACCURACY = 60
-    //var restApi: RESTApi? = null
+    private val MINIMUM_ACCURACY = 45
     private var apiService:ApiService? = null
     private var mapReady:Boolean = false
     var googleMap: GoogleMap? = null
-    var lastKnownLocation: Location?=null
     private var potholeQuerySent = false
     var didInitialZoom: Boolean = false
-    var reachedMinimumAccuracy:Boolean = false
+    private var lastKnownLocation: Location? = null
+    var potholeList: List<Pothole> = ArrayList()
+    var mProgressDialog: ProgressDialog? = null
 
     /**
      *  Callback for when map is ready
@@ -50,19 +51,18 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isCompassEnabled = true
         googleMap.uiSettings.isMyLocationButtonEnabled = true
         mapReady = true
+        showProgressDialog()
         googleMap.setOnMyLocationChangeListener(object : GoogleMap.OnMyLocationChangeListener{
             override fun onMyLocationChange(location: Location?) {
-                LocationHolder.LATITUDE = location!!.latitude.toString()
-                LocationHolder.LONGITUDE = location.longitude.toString()
-                if (location.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
-                    Toast.makeText(baseContext, "You are at $location", Toast.LENGTH_SHORT).show()
+                if (location!!.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
+                    hideProgressDialog()
+                    LocationHolder.LATITUDE = location.latitude.toString()
+                    LocationHolder.LONGITUDE = location.longitude.toString()
                     lastKnownLocation = location
-                    reachedMinimumAccuracy = true
                     if (!potholeQuerySent){
                         getNearbyPotholes(location)
                         potholeQuerySent = true
                     }
-
                 }
                 if (!didInitialZoom){
                     val latLng = LatLng(location.latitude, location.longitude)
@@ -112,8 +112,9 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 
             override fun onResponse(call: Call<List<Pothole>>, response: Response<List<Pothole>>) {
-                val potholeList: List<Pothole>? = response.body()
-                if (potholeList!=null){
+                potholeList = response.body()!!
+                googleMap!!.clear()
+                if (potholeList.isNotEmpty()){
                     addMarkersOnMap(potholeList)
                 }else{
                     Log.d("MAINACTIVITY", "pothole list empty")
@@ -132,6 +133,27 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             for (pothole in markers) {
                 googleMap!!.addMarker(MarkerOptions().position(LatLng(pothole.location!!.lat!!, pothole.location!!.lng!!)))
             }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (lastKnownLocation!=null){
+            getNearbyPotholes(lastKnownLocation!!)
+        }
+    }
+
+    private fun showProgressDialog(){
+        if (mProgressDialog == null){
+            mProgressDialog = ProgressDialog.show(this, "Searching", "Getting accurate location...", true)
+        }
+        mProgressDialog!!.show()
+    }
+
+    private fun hideProgressDialog(){
+        if (mProgressDialog!=null && mProgressDialog!!.isShowing){
+            mProgressDialog!!.hide()
+            mProgressDialog!!.dismiss()
         }
     }
 }

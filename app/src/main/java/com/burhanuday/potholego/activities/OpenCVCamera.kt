@@ -12,10 +12,7 @@ import android.view.SurfaceView
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.burhanuday.potholego.utils.OpenCameraView
-import com.burhanuday.potholego.utils.Constants
-import com.burhanuday.potholego.utils.FolderUtil
-import com.burhanuday.potholego.utils.Utilities
+import com.burhanuday.potholego.utils.*
 import kotlinx.android.synthetic.main.show_camera.*
 import org.opencv.android.LoaderCallbackInterface
 import org.opencv.android.OpenCVLoader
@@ -40,7 +37,7 @@ class OpenCVCamera: AppCompatActivity(), CameraBridgeViewBase.CvCameraViewListen
         mOpenCvCameraView.visibility = SurfaceView.VISIBLE
         mOpenCvCameraView.setCvCameraViewListener(this)
         mOpenCvCameraView.enableFpsMeter()
-
+        mOpenCvCameraView.setCallingActivity(this@OpenCVCamera)
 
         /**
          * listens to changes when the flash button is pressed
