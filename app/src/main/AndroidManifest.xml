@@ -41,6 +41,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -55,7 +56,8 @@
                     android:resource="@xml/file_paths"/>
         </provider>
 
-        <activity android:name=".activities.CameraActivity">
+        <activity android:name=".activities.CameraActivity"
+        android:theme="@style/NoActionBar">
         </activity>
         <activity
                 android:name=".activities.OpenCVCamera"
@@ -65,7 +67,6 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_api_key"/>
-
     </application>
 
 </manifest>

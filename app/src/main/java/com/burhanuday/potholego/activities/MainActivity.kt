@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isCompassEnabled = true
         googleMap.uiSettings.isMyLocationButtonEnabled = true
         mapReady = true
-        showProgressDialog()
+        //showProgressDialog()
         googleMap.setOnMyLocationChangeListener(object : GoogleMap.OnMyLocationChangeListener{
             override fun onMyLocationChange(location: Location?) {
                 if (location!!.hasAccuracy() && location.accuracy<=MINIMUM_ACCURACY){
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
          * Open camera to report new pothole
          */
         fab_new_pothole.setOnClickListener{
-            val openCamera = Intent(this, OpenCVCamera::class.java)
+            val openCamera = Intent(this, CameraActivity::class.java)
             startActivity(openCamera)
         }
 
