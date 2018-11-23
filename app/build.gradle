@@ -48,8 +48,5 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.4.1"
 
     //camera kit
-    implementation 'com.camerakit:camerakit:1.0.0-beta3.9'
-    implementation 'com.camerakit:jpegkit:0.1.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.71'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.24.0'
+    implementation 'com.otaliastudios:cameraview:1.6.0'
 }

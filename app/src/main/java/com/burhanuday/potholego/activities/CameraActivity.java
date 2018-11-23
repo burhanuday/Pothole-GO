@@ -21,7 +21,7 @@ import com.burhanuday.potholego.models.LocationHolder;
 import com.burhanuday.potholego.utils.Constants;
 import com.burhanuday.potholego.utils.FolderUtil;
 import com.burhanuday.potholego.utils.Utilities;
-import com.camerakit.CameraKitView;
+import com.otaliastudios.cameraview.*;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -38,21 +38,23 @@ import java.util.Objects;
 
 public class CameraActivity extends AppCompatActivity {
 
-    private CameraKitView cameraKitView;
     private ProgressDialog mProgressDialog = null;
     public boolean firstTaken = false;
     String first, second;
     private Context context;
     private FloatingActionButton capture;
+    private CameraView cameraView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+        if (getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        cameraKitView = findViewById(R.id.camera);
-        cameraKitView.setAspectRatio(1f);
+
         context = CameraActivity.this;
 
         capture = findViewById(R.id.fab_capture);
@@ -60,72 +62,54 @@ public class CameraActivity extends AppCompatActivity {
         capture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cameraView.capturePicture();
+            }
+        });
+
+        cameraView = findViewById(R.id.camera);
+        cameraView.setLifecycleOwner(this);
+        cameraView.mapGesture(Gesture.PINCH, GestureAction.ZOOM); // Pinch to zoom!
+        cameraView.mapGesture(Gesture.TAP, GestureAction.FOCUS_WITH_MARKER); // Tap to focus!
+        cameraView.mapGesture(Gesture.SCROLL_VERTICAL, GestureAction.EXPOSURE_CORRECTION);
+        cameraView.setJpegQuality(100);
+        cameraView.setCropOutput(true);
+
+        cameraView.addCameraListener(new CameraListener() {
+            @Override
+            public void onPictureTaken(byte[] jpeg) {
                 String pictureOut = Constants.SCAN_IMAGE_LOCATION  + File.separator + Utilities.generateFilename();
                 FolderUtil.createDefaultFolder(Constants.SCAN_IMAGE_LOCATION);
-                captureImage(pictureOut);
+                captureImage(pictureOut, jpeg);
+                super.onPictureTaken(jpeg);
             }
         });
 
     }
 
-    private void captureImage(final String mPictureFileName){
-        cameraKitView.captureImage(new CameraKitView.ImageCallback() {
-            @Override
-            public void onImage(CameraKitView cameraKitView, byte[] data) {
-                Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-                Uri uri = Uri.parse(mPictureFileName);
+    private void captureImage(final String mPictureFileName, byte[] data){
+        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+        Uri uri = Uri.parse(mPictureFileName);
+        //Bitmap bm = rotate(bitmap, 90);
 
-                try {
-                    FileOutputStream fos = new FileOutputStream(mPictureFileName);
-                    //bitmap.compress(Bitmap.CompressFormat.JPEG, 80, fos);
-                    fos.close();
+        try {
+            FileOutputStream fos = new FileOutputStream(mPictureFileName);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.close();
 
-                } catch (java.io.IOException e) {
-                    Log.e("PictureDemo", "Exception in photoCallback", e);
-                }
+        } catch (java.io.IOException e) {
+            Log.e("PictureDemo", "Exception in photoCallback", e);
+        }
 
-                if (!firstTaken){
-                    first = mPictureFileName;
-                    //Toast.makeText(context, "first taken", Toast.LENGTH_SHORT).show();
-                    firstTaken = true;
-                }else{
-                    second = mPictureFileName;
-                    //Toast.makeText(context, "second taken", Toast.LENGTH_SHORT).show();
-                    firstTaken = false;
-                    sendMultipleParts();
-                }
-            }
-        });
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        cameraKitView.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        cameraKitView.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        cameraKitView.onPause();
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        cameraKitView.onStop();
-        super.onStop();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        cameraKitView.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (!firstTaken){
+            first = mPictureFileName;
+            //Toast.makeText(context, "first taken", Toast.LENGTH_SHORT).show();
+            firstTaken = true;
+        }else{
+            second = mPictureFileName;
+            //Toast.makeText(context, "second taken", Toast.LENGTH_SHORT).show();
+            firstTaken = false;
+            sendMultipleParts();
+        }
     }
 
     private void sendMultipleParts(){
@@ -176,5 +160,23 @@ public class CameraActivity extends AppCompatActivity {
         if (mProgressDialog!=null && mProgressDialog.isShowing()){
             mProgressDialog.hide();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cameraView.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        cameraView.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        cameraView.destroy();
     }
 }
