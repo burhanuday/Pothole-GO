@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -88,8 +87,6 @@ public class CameraActivity extends AppCompatActivity {
 
     private void captureImage(final String mPictureFileName, byte[] data){
         Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-        Uri uri = Uri.parse(mPictureFileName);
-        //Bitmap bm = rotate(bitmap, 90);
 
         try {
             FileOutputStream fos = new FileOutputStream(mPictureFileName);
