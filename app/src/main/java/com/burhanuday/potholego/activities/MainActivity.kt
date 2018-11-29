@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.*
 import android.location.Location
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.burhanuday.potholego.ApiClient
 import com.burhanuday.potholego.ApiService
+import com.burhanuday.potholego.BuildConfig
 import com.burhanuday.potholego.R
 import com.burhanuday.potholego.models.LocationHolder
 import com.burhanuday.potholego.models.Pothole
@@ -80,6 +83,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar!!.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 
         val mapFragment : SupportMapFragment? =
             supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment

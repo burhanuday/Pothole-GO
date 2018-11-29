@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,9 +40,10 @@ public class CameraActivity extends AppCompatActivity {
 
     private ProgressDialog mProgressDialog = null;
     public boolean firstTaken = false;
+    private boolean isFlashOn = false;
     String first, second;
     private Context context;
-    private FloatingActionButton capture;
+    private FloatingActionButton capture, flash;
     private CameraView cameraView;
 
 
@@ -53,10 +55,29 @@ public class CameraActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
         context = CameraActivity.this;
 
         capture = findViewById(R.id.fab_capture);
+        flash = findViewById(R.id.fab_flash);
+
+        flash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isFlashOn){
+                    cameraView.setFlash(Flash.OFF);
+                    flash.setImageResource(R.drawable.ic_flash_off);
+                    isFlashOn = false;
+                }else {
+                    cameraView.setFlash(Flash.ON);
+                    flash.setImageResource(R.drawable.ic_flash_on);
+                    isFlashOn = true;
+                }
+
+            }
+        });
 
         capture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +87,7 @@ public class CameraActivity extends AppCompatActivity {
         });
 
         cameraView = findViewById(R.id.camera);
+        cameraView.setFlash(Flash.OFF);
         cameraView.setLifecycleOwner(this);
         cameraView.mapGesture(Gesture.PINCH, GestureAction.ZOOM); // Pinch to zoom!
         cameraView.mapGesture(Gesture.TAP, GestureAction.FOCUS_WITH_MARKER); // Tap to focus!
