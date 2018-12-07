@@ -34,7 +34,8 @@ const pothole = new Schema({
 });
 
 pothole.index({
-  location: '2dsphere'
-})
+  location: "2dsphere"
+});
 
-module.exports = mongoose.model("pothole", pothole);
+const Pothole = mongoose.model("pothole", pothole);
+module.exports = Pothole;

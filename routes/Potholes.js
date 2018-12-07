@@ -25,8 +25,6 @@ api.post(
       if (err) console.log(err);
       else {
         console.log(authData);
-        // console.log(req);
-
         let obj;
 
         obj = {

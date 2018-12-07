@@ -33,7 +33,7 @@ app.listen(port, (req, res) => {
 });
 
 // Import routes
-const potholeRoute = require("./routes/Create");
+const potholeRoute = require("./routes/Potholes");
 const loginRoute = require("./routes/Login");
 app.use("/api/v1/", potholeRoute);
 app.use("/api/v1/", loginRoute);
