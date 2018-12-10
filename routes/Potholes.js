@@ -3,6 +3,7 @@ const express = require("express");
 const multerFunctions = require("../helpers/multer");
 const methodOverride = require("method-override");
 const jwt = require("jsonwebtoken");
+const talk = require("../helpers/interact");
 const api = express.Router();
 
 // Verify Token Middleware
@@ -62,6 +63,7 @@ api.post(
               newPothole
                 .save()
                 .then(success => {
+                  talk(obj.images.original);
                   console.log("Successfully saved");
                   res.json({ success: "Saved" });
                 })
