@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const User = require("../model/User");
 
 // Check if the user already exists in the database. If not, create a document and release a new token. Else, just release a new token
