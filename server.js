@@ -5,13 +5,15 @@ require("dotenv").config();
 const app = express();
 
 // Mongoose middleware
-mongoose.connect(process.env.MONGODB);
-let db = mongoose.connection;
-
-db.on("error", console.error.bind(console, "connection error: "));
-db.once("open", () => {
-  console.log("MongoDB is connected to the server....");
-});
+mongoose
+  .connect(process.env.MONGODB)
+  .then(result => {
+    let port = process.env.PORT || 9000;
+    app.listen(port, (req, res) => {
+      console.log(`Server started on port ${port} & MongoDB is connected`);
+    });
+  })
+  .catch(err => console.log(err));
 
 // Body Parser middleware
 app.use(
@@ -25,11 +27,6 @@ app.use("/uploads", express.static("uploads"));
 // Default route
 app.get("/api/v1", (req, res) => {
   res.json("Pothole Go");
-});
-
-let port = process.env.PORT || 9000;
-app.listen(port, (req, res) => {
-  console.log(`Server started on port ${port}`);
 });
 
 // Import routes

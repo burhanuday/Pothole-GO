@@ -6,7 +6,6 @@ exports.createAPothole = (req, res, next) => {
   jwt.verify(req.token, "secretkey", (err, authData) => {
     if (err) console.log(err);
     else {
-      //console.log(authData);
       let obj;
 
       obj = {
@@ -39,7 +38,6 @@ exports.createAPothole = (req, res, next) => {
           if (obj.images.original.length == 2) {
             console.log(obj.images.original[0]);
             console.log(obj.images.original[1]);
-            console.log("i am here");
 
             const newPothole = new POTHOLE_MODEL(obj);
             newPothole
@@ -52,7 +50,7 @@ exports.createAPothole = (req, res, next) => {
               .catch(err => res.json(err));
             clearInterval(wait);
           }
-        }, 2000);
+        }, 1000);
       }
     }
   });
