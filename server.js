@@ -27,7 +27,7 @@ app.get("/api/v1", (req, res) => {
   res.json("Pothole Go");
 });
 
-let port = process.env.PORT || 7000;
+let port = process.env.PORT || 9000;
 app.listen(port, (req, res) => {
   console.log(`Server started on port ${port}`);
 });

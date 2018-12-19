@@ -37,5 +37,4 @@ pothole.index({
   location: "2dsphere"
 });
 
-const Pothole = mongoose.model("pothole", pothole);
-module.exports = Pothole;
+module.exports = mongoose.model("Pothole", pothole);
