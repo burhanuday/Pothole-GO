@@ -27,7 +27,7 @@ download_image()
 
 
 def get_parameters_from_txt(txt_file):
-    d = dict()  # initializing an empty dictionary
+    d = dict()  # initializing empty dictionary
     with open(txt_file) as f:
         content = f.readlines()
         for s in content:
@@ -46,19 +46,19 @@ def get_parameters_from_txt(txt_file):
 
 d = get_parameters_from_txt('parameter_file.txt')
 
-wd = os.path.join(d['directory'])  # new on Feb 3rd, 2017
-file_all = os.listdir(wd)  # new on Feb 3rd, 2017
+wd = os.path.join(d['directory'])  # new
+file_all = os.listdir(wd)
 
 images = []
 for f in file_all:
     if any(valid_file_extension.lower() in f.lower() for valid_file_extension in
-           d['image_file_extensions']): images.append(f)  # new on Feb 3rd, 2017
+           d['image_file_extensions']): images.append(f)
 
 
 for i in images:
-    image = os.path.join(d['directory'], i)  # new on Feb 3rd, 2017
+    image = os.path.join(d['directory'], i)
     cv.measure_object_dimension(image, coin_diameter=int(d['coin_diameter']), unit=d['unit'],
                                 resize_width=int(d['resize_width']), rotate_angle=int(d['rotate_angle']),
                                 blur=(int(d['blur']), int(d['blur'])),
                                 cannyMin=int(d['cannyMin']), cannyMax=int(d['cannyMax']),
-                                edge_iterations=int(d['edge_iterations']))  # new on Feb 3rd, 2017
+                                edge_iterations=int(d['edge_iterations']))
