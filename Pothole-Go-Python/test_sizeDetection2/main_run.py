@@ -13,7 +13,6 @@ def main():
     cv = ComputerVision()
     cwd = os.getcwd()
     file_all = os.listdir(cwd)
-    final()
 
     for f in file_all:
         if f.lower().endswith('jpg'): images.append(f)  # checks for all files with the given extension
@@ -25,4 +24,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    final()
+
