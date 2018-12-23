@@ -6,25 +6,39 @@ import urllib.parse
 import urllib.request
 import urllib
 import os.path
+import cv2
 from pprint import pprint
 
 cv = ComputerVision()
 
+'''
 def read_line():
     lines = sys.stdin.readlines()
     return json.loads(lines[0])
-
+'''
 
 def download_image():
-    save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
-    # get_url = str(input("Give URL: "))
-    get_url = read_line()
+    # save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
+    save_path = "../test_sizeDetection2/downloaded_images/"
+    get_url = str(input("Give URL: "))
+    # get_url = read_line()
     name = get_url.split("/")[-1]
     fullname = str(name) + ".jpg"
     urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
 
 download_image()
 
+'''
+def save_processed_file():
+    dwnld_img_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
+    path = 'E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/processed_images/'
+    name = download_image().split("/")[-1]
+    fullname_final = str(name) + "_processed.jpg"
+    # cv2.imwrite(fullname, fullname)
+    cv2.imwrite(os.path.join(path, download_image().fullname), fullname_final)
+
+save_processed_file()
+'''
 
 def get_parameters_from_txt(txt_file):
     d = dict()  # initializing empty dictionary
@@ -62,4 +76,5 @@ for i in images:
                                 blur=(int(d['blur']), int(d['blur'])),
                                 cannyMin=int(d['cannyMin']), cannyMax=int(d['cannyMax']),
                                 edge_iterations=int(d['edge_iterations']))
-    c
+    cv2.imwrite(image, i)
+
