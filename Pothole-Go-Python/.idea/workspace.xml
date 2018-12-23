@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py" line="0" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py" afterDir="false" />
-    </list>
+    <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="-1513">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -282,7 +279,7 @@
       <option name="presentableId" value="Default" />
       <updated>1545378039722</updated>
       <workItem from="1545378051605" duration="3263000" />
-      <workItem from="1545538755808" duration="25065000" />
+      <workItem from="1545538755808" duration="25313000" />
     </task>
     <servers />
   </component>
@@ -292,10 +289,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28328000" />
+    <option name="totallyTimeSpent" value="28576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -419,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        <state relative-caret-position="-1513">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
