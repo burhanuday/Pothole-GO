@@ -1,7 +1,7 @@
 import urllib.parse
 import urllib.request
 import urllib  # for #3
-import os
+import os.path
 from pprint import pprint
 import random  # for # 4
 
@@ -29,10 +29,11 @@ f.close()
 
 # 4
 def download_image():
+    save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
     get_url = str(input("Give URL: "))
     name = get_url.split("/")[-1]
     fullname = str(name) + ".jpg"
-    urllib.request.urlretrieve(get_url, fullname)
+    urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
 
 
 download_image()

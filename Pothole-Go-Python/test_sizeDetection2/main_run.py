@@ -1,5 +1,11 @@
-from test_sizeDetection2.test1_objectParameters2 import ComputerVision
+from test_sizeDetection2.measurement_pydo2 import ComputerVision
+from test_sizeDetection2.test1_objectParameters2 import final
 import sys, json, os
+import urllib.parse
+import urllib.request
+import urllib
+import os.path
+from pprint import pprint
 
 
 def read_line():
@@ -7,21 +13,15 @@ def read_line():
     return json.loads(lines[0])
 
 
-def main():
-    images = read_line()  # reads the images from json
-
-    cv = ComputerVision()
-    cwd = os.getcwd()
-    file_all = os.listdir(cwd)
-
-    for f in file_all:
-        if f.lower().endswith('jpg'): images.append(f)  # checks for all files with the given extension
-
-    for i in images:
-        image = i
-        cv.measure_object_dimension(image, coin_diameter=24, unit='mm')  # mm measure
+def download_image():
+    save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
+    # get_url = str(input("Give URL: "))
+    get_url = read_line()
+    name = get_url.split("/")[-1]
+    fullname = str(name) + ".jpg"
+    urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
 
 
 if __name__ == '__main__':
-    main()
-
+    download_image()
+    final()

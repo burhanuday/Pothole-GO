@@ -28,7 +28,7 @@ class Utilities:
         # return image, gray
 
     def detect_edge(self, gray, cannyMin, cannyMax):
-        edged1 = feature.canny(gray, sigma = 3)  # changed to skimage and sigma values
+        edged1 = feature.canny(gray, sigma=3)  # changed to skimage and sigma values
         edged = img_as_ubyte(edged1)  # to convert from skimage to cv2 image
         edged = cv2.Canny(edged, cannyMin, cannyMax)  # changed from gray to edged
         edged = cv2.dilate(edged, None, iterations=1)  # try playing with iterations

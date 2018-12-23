@@ -1,5 +1,7 @@
 from test_sizeDetection2.measurement_pydo2 import ComputerVision
 import os
+import sys, json, os
+
 
 def get_parameters_from_txt(txt_file):
     d = dict()  # initializing an empty dictionary
@@ -20,10 +22,10 @@ def get_parameters_from_txt(txt_file):
 
 
 cv = ComputerVision()
-d = get_parameters_from_txt('txt_file.txt')
+d = get_parameters_from_txt('parameters.txt')
 
 wd = os.path.join(d['directory'])  # new
-file_all = os.listdir(wd)  # new
+file_all = os.listdir(wd)  # new 
 
 images = []
 for f in file_all:
@@ -31,9 +33,9 @@ for f in file_all:
            d['image_file_extensions']): images.append(f)  # new
 
 for i in images:
-    image = os.path.join(d['directory'], i)  # new
+    image = os.path.join(d['directory'], i)  # new on Feb 3rd, 2017
     cv.measure_object_dimension(image, coin_diameter=int(d['coin_diameter']), unit=d['unit'],
                                 resize_width=int(d['resize_width']), rotate_angle=int(d['rotate_angle']),
                                 blur=(int(d['blur']), int(d['blur'])),
                                 cannyMin=int(d['cannyMin']), cannyMax=int(d['cannyMax']),
-                                        edge_iterations=int(d['edge_iterations']))  # new
+                                edge_iterations=int(d['edge_iterations']))  # new

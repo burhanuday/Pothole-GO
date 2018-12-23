@@ -1,4 +1,4 @@
-directory = E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeDetection2\sample_images
+directory = E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeDetection2\downloaded_images
 image_file_extensions = jpg, jpeg, tif, tiff, bmp, png
 coin_diameter = 24
 unit = mm
