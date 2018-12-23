@@ -3,14 +3,12 @@ from test_sizeDetection.measurement_pydo import ComputerVision
 
 import sys, json, os
 
-
 def read_line():
     lines = sys.stdin.readlines()
     return json.loads(lines[0])
 
 def main():
     images = read_line() # reads the images from json
-    print(images)
 
     cv = ComputerVision()
     cwd = os.getcwd()
