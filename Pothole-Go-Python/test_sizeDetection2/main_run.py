@@ -1,5 +1,4 @@
 from test_sizeDetection2.measurement_pydo2 import ComputerVision
-from test_sizeDetection2.test1_objectParameters2 import final
 import sys, json, os
 import urllib.parse
 import urllib.request
@@ -24,4 +23,3 @@ def download_image():
 
 if __name__ == '__main__':
     download_image()
-    final()

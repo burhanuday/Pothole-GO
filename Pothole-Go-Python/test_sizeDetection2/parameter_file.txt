@@ -7,4 +7,4 @@ rotate_angle = 0
 blur = 13
 cannyMin = 30
 cannyMax = 70
-edge_iterations = 2
+edge_iterations = 1
