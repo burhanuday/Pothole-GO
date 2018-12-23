@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="666c9418-6a1e-444e-b080-bb92e9147535" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/1_pothole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/1_pothole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/auto_canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/auto_canny.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/images/1_pothole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/images/1_pothole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/images/rsz_pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/auto-canny/images/rsz_pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/example_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/example_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/rsz_pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/rsz_pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/example_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/researchgate_paper_pothole.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/researchgate_paper_pothole.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test5.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/images/test7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/object_size.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/size-of-objects/object_size.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test1_height.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test1_height.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test2_cannyEdgeBoundary.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test2_cannyEdgeBoundary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test3_openCvTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test3_openCvTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test4_realTimeEdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test4_realTimeEdgeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test5_cannyZeroParameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test5_cannyZeroParameter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test6_cannyScikitImage.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test6_cannyScikitImage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test6_canny_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CannyEdgeDetection/test7_cannyEdgeNumpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/CannyEdgeDetection/test7_cannyEdgeNumpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/1_pothole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/1_pothole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/GaussianBlur_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/GaussianBlur_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/GaussianBlur_test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/GaussianBlur_test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/rsz_pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/rsz_pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/scikitEdgeDetection_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/scikitEdgeDetection_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/sobelEdgeImage_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/sobelEdgeImage_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/sobelEdgeVideo_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/sobelEdgeVideo_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomEdgeDetections/vectorization_test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/RandomEdgeDetections/vectorization_test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/1_test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/1_test1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/1_test2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/1_test2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/1_test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/1_test3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/1_test_pothole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/1_test_pothole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/example_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/example_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/rsz_pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/rsz_pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test1_sizeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test1_sizeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test4.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test5.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SizeDetection/test7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/SizeDetection/test7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/1_1_5coin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/1_1_5coin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/1_2_5coin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/1_2_5coin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/1_test1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/1_test1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/1_test3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/1_test3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/1_test_pothole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/1_test_pothole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/cv_utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/cv_utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/example_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/example_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/main_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/main_run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/pydonesia.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/rsz_pothole1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/rsz_pothole1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/pothole.js" beforeDir="false" afterPath="$PROJECT_DIR$/../controllers/pothole.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helpers/interact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../helpers/interact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../helpers/verifyToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/../helpers/verifyToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Pothole_GO_python$test3_objectParameters.coverage" NAME="test3_objectParameters Coverage Results" MODIFIED="1545538491151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection" />
+    <SUITE FILE_PATH="coverage/Pothole_GO_python$main_run.coverage" NAME="main_run Coverage Results" MODIFIED="1545539534835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection/main_run.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="10" />
+    <option name="y" value="43" />
+    <option name="width" value="1260" />
+    <option name="height" value="686" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Pothole-GO-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-GO-python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-GO-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-GO-python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_sizeDetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.main_run">
+    <configuration name="main_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-GO-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeDetection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeDetection/main_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test3_objectParameters" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-GO-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeDetection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main_run" />
+        <item itemvalue="Python.test3_objectParameters" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="666c9418-6a1e-444e-b080-bb92e9147535" name="Default Changelist" comment="" />
+      <created>1545537812564</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545537812564</updated>
+      <workItem from="1545537816569" duration="2151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2151000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="43" width="1260" height="686" extended-state="1" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958949" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32996634" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/pydonesia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

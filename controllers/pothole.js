@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const talk = require("../helpers/interact");
 const multerFunctions = require("../helpers/multer");
 const POTHOLE_MODEL = require("../model/Pothole");
 
@@ -43,7 +44,8 @@ exports.createAPothole = (req, res, next) => {
             newPothole
               .save()
               .then(success => {
-                //talk(obj.images.original);
+                // console.log(success);
+                talk(obj.images.original);
                 console.log("Successfully saved");
                 res.status(201).json({ success: "Saved" });
               })
@@ -150,4 +152,3 @@ exports.updatePothole = (req, res, next) => {
     }
   });
 };
-

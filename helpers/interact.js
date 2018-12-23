@@ -1,17 +1,25 @@
-module.exports = data => {
-  var spawn = require("child_process").spawn,
-    py = spawn("python", [
-      "../Pothole-GO-python/test_sizeDetection/main_run.py"
-    ]),
-    dataString = "";
+const PYShell = require("python-shell").PythonShell;
+const path = require("path");
 
-  py.stdout.on("data", function(data) {
-      console.log(data);
-      dataString += data.toString();
+module.exports = data => {
+  console.log(data);
+  let pythonScriptPth = path.resolve(__dirname, "../Pothole-GO-python/test_sizeDetection/main_run.py");
+  console.log(pythonScriptPth);
+
+  let pyshell = new PYShell(pythonScriptPth);
+  // console.log(pyshell);
+  pyshell.send(JSON.stringify(data));
+  pyshell.on("message", function(message) {
+    // received a message sent from the Python script (a simple "print" statement)
+    console.log(message);
   });
-  py.stdout.on("end", function() {
-    console.log("Sum of numbers=", dataString);
+
+  // end the input stream and allow the process to exit
+  pyshell.end(function(err) {
+    if (err) {
+      throw err;
+    }
+
+    console.log("finished");
   });
-  py.stdin.write(JSON.stringify(data));
-  py.stdin.end();
 };

@@ -4,11 +4,13 @@ from test_sizeDetection.measurement_pydo import ComputerVision
 import sys, json, os
 
 def read_line():
+    print("Hello World")
     lines = sys.stdin.readlines()
     return json.loads(lines[0])
 
 def main():
     images = read_line() # reads the images from json
+    print(images)
 
     cv = ComputerVision()
     cwd = os.getcwd()
@@ -16,7 +18,7 @@ def main():
     final()
 
     for f in file_all:
-        if f.lower().endswith('jpg'): images.append(f)  # checks for all files with the given extension
+        if f.lower().__contains__('jpg'): images.append(f)  # checks for all files with the given extension
 
     for i in images:
         image = i

@@ -8,7 +8,7 @@ const app = express();
 mongoose
   .connect(process.env.MONGODB)
   .then(result => {
-    let port = process.env.PORT || 9000;
+    let port = process.env.PORT || 1300;
     app.listen(port, (req, res) => {
       console.log(`Server started on port ${port} & MongoDB is connected`);
     });
