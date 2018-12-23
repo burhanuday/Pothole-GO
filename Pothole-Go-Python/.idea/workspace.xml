@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/1_1_5coin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/1_2_5coin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test_pothole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/sample_images/example_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/test_objectParameters2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_sizeDetection2/txt_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_sizeDetection/main_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/main_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeDetection/pydonesia.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,35 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -54,7 +38,38 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection2/txt_file.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="84" lean-forward="true" selection-start-column="84" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test_objectParameters2.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -64,6 +79,10 @@
       <list>
         <option value="$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py" />
         <option value="$PROJECT_DIR$/test_sizeDetection/main_run.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection2/test_objectParameters2.py" />
+        <option value="$PROJECT_DIR$/test_sizeDetection2/txt_file.txt" />
       </list>
     </option>
   </component>
@@ -85,6 +104,16 @@
             <path>
               <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_sizeDetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_sizeDetection2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -152,16 +181,15 @@
       <option name="presentableId" value="Default" />
       <updated>1545378039722</updated>
       <workItem from="1545378051605" duration="3263000" />
-      <workItem from="1545538755808" duration="1154000" />
+      <workItem from="1545538755808" duration="2043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4417000" />
+    <option name="totallyTimeSpent" value="5306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -190,12 +218,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+        <state relative-caret-position="119">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -210,13 +238,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run.py">
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test_objectParameters2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/txt_file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="84" lean-forward="true" selection-start-column="84" selection-end-column="84" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,10 @@
+directory = D:\arnold\blog\pydonesia.blogspot.co.id\2017\02. Feb\week2\sample_images
+image_file_extensions = jpg, jpeg, tif, tiff, bmp, png
+coin_diameter = 24
+unit = mm
+resize_width = 700
+rotate_angle = 0
+blur = 5
+cannyMin = 50
+cannyMax = 100
+edge_iterations = 1
