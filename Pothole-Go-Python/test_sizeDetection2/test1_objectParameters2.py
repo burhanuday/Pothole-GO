@@ -17,7 +17,7 @@ def read_line():
 
 def download_image():
     save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
-    get_url = str(input("Give URL: "))
+    # get_url = str(input("Give URL: "))
     get_url = read_line()
     name = get_url.split("/")[-1]
     fullname = str(name) + ".jpg"
@@ -62,3 +62,4 @@ for i in images:
                                 blur=(int(d['blur']), int(d['blur'])),
                                 cannyMin=int(d['cannyMin']), cannyMax=int(d['cannyMax']),
                                 edge_iterations=int(d['edge_iterations']))
+    c
