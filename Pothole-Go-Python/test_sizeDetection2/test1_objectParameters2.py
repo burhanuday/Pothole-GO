@@ -1,7 +1,6 @@
 from test_sizeDetection2.measurement_pydo2 import ComputerVision
 import os
 
-
 def get_parameters_from_txt(txt_file):
     d = dict()  # initializing an empty dictionary
     with open(txt_file) as f:
