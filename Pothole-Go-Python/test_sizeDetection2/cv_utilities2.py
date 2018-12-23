@@ -3,6 +3,7 @@ from builtins import input
 import imutils
 import numpy as np
 import cv2
+import os
 from skimage import feature
 from skimage import io
 from skimage.color import rgb2gray
@@ -110,4 +111,5 @@ class Utilities:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         cv2.putText(image, "{:.1f}{}".format(dimB, unit), (int(trbrX + 10), int(trbrY)),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+
 
