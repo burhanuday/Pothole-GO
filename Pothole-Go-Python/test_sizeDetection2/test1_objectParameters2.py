@@ -1,4 +1,5 @@
 from test_sizeDetection2.measurement_pydo2 import ComputerVision
+from test_sizeDetection2.cv_utilities2 import Utilities
 import os
 import sys, json, os
 import sys, json, os
@@ -18,8 +19,8 @@ def read_line():
     return json.loads(lines[0])
 
 
-# get_url = str(input("Give URL: "))
-get_url = read_line()
+get_url = str(input("Give URL: "))
+# get_url = read_line()
 name = get_url.split("/")[-1]
 fullname = str(name) + ".jpg"
 
@@ -68,17 +69,30 @@ def download_image():
                                     blur=(int(d['blur']), int(d['blur'])),
                                     cannyMin=int(d['cannyMin']), cannyMax=int(d['cannyMax']),
                                     edge_iterations=int(d['edge_iterations']))
-        sys.exit()
-    print("Reached here...")
+        print("Reached here...")
+        writing = cv2.imwrite(fullname, image)
+        print(writing)
 
+        '''
+
+        def save_processed_img():
+            path = "../test_sizeDetection2/processed_images/"
+            print(path)
+            print(fullname)
+            cv2.imwrite(os.path.join(path, fullname), image)
+
+        save_processed_img()
+        '''
+'''
     def save_processed_img():
         path = "../test_sizeDetection2/processed_images/"
         print(path)
         print(fullname)
         cv2.imwrite(os.path.join(path, fullname), fullname)
+
     save_processed_img()
 
-
+'''
 download_image()
 
 '''
@@ -131,3 +145,32 @@ for i in images:
                                 edge_iterations=int(d['edge_iterations']))
 
 '''
+
+# https://storage.googleapis.com/potholego.appspot.com/2018-12-23%2018.30.44.jpg_1545570112694
+
+'''
+get_url = str(input("Give URL: "))
+            # get_url = read_line()
+            name = get_url.split("/")[-1]
+            fullname = str(name) + ".jpg"
+
+            def download_image():
+                # save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
+                save_path = "../test_sizeDetection2/downloaded_images/"
+                # get_url = str(input("Give URL: "))
+                # get_url = read_line()
+                # name = get_url.split("/")[-1]
+                # fullname = str(name) + ".jpg"
+                print(fullname)
+                urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
+
+                def save_processed_img():
+                    path = "../test_sizeDetection2/processed_images/"
+                    print(path)
+                    print(fullname)
+                    cv2.imwrite(os.path.join(path, fullname), fullname)
+
+                save_processed_img()
+
+            download_image()
+            '''

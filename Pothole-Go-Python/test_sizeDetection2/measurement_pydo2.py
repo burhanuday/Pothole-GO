@@ -1,7 +1,9 @@
 from test_sizeDetection2.cv_utilities2 import Utilities as utils
 import cv2
-import os
-
+import os, sys
+import urllib.request
+import urllib.parse
+import base64
 
 class ComputerVision:
     def __init__(self):
@@ -46,6 +48,11 @@ class ComputerVision:
             utils.get_dimensions(dA, dB, pixelsPerMetric, original_image, unit, tltrX, tltrY, trbrX, trbrY)
 
             cv2.imshow(image, original_image)
+            print(type(image))
+            # print("Encoded Image")
+            # encoded = cv2.imencode('.jpg', original_image)[1].tostring()
+            # print(encoded)
+            # cv2.imwrite("../test_sizeDetection2/processed_images/wakanda.jpg", image)
             cv2.waitKey(0)
 
         cv2.destroyAllWindows()

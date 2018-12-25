@@ -3,35 +3,27 @@ from builtins import input
 import imutils
 import numpy as np
 import cv2
-import os
 from skimage import feature
 from skimage import io
 from skimage.color import rgb2gray
 from skimage import img_as_ubyte
-from imutils import contours
-import urllib.request
-import urllib.parse
 
 
 class Utilities:
     def __init__(self):
-        print('Waiting for files...')
+        print('Checks each and every file')
 
     def optimize_image(self, filename, resize_width, rotate_angle, blur):
         image = cv2.imread(filename)
+        # image = image[:, :, ::-1]  # convert from BGR to RGB image for skimage
         image = imutils.resize(image, width=resize_width)
         image = imutils.rotate(image, angle=rotate_angle)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, blur, 0)
         cv2.imshow('Gray', gray)
         return image, gray
-        # image = imutils.resize(image, width=resize_width)
-        # image = imutils.rotate(image, angle=rotate_angle)
-        # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # gray = cv2.GaussianBlur(gray, blur, 0)
-        # return image, gray
 
-    def detect_edge(self, gray, cannyMin, cannyMax):
+    def detect_edge(self, gray, cannyMin, cannyMax):  # changed from image to gray
         edged1 = feature.canny(gray, sigma=3)  # changed to skimage and sigma values
         edged = img_as_ubyte(edged1)  # to convert from skimage to cv2 image
         edged = cv2.Canny(edged, cannyMin, cannyMax)  # changed from gray to edged
@@ -39,12 +31,10 @@ class Utilities:
         edged = cv2.erode(edged, None, iterations=1)
         cv2.imshow('Edged', edged)
         return edged
-        # edged = cv2.Canny(image, cannyMin, cannyMax)
-        # edged = cv2.dilate(edged, None, iterations=1)
-        # edged = cv2.erode(edged, None, iterations=1)
-        # return edged
 
     def detect_and_sort_objects(self, image):
+        from imutils import contours
+
         cnts = cv2.findContours(image.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         cnts = cnts[0] if imutils.is_cv2() else cnts[1]
         (cnts, _) = contours.sort_contours(cnts)
@@ -70,7 +60,6 @@ class Utilities:
     def mark_corners(self, box, image):
         for (x, y) in box:
             cv2.circle(image, (int(x), int(y)), 3, (0, 0, 255), -1)
-            print(type(image))
 
     def get_midpoints(self, box, image, draw=True):
         def midpoint(ptA, ptB):
@@ -116,29 +105,81 @@ class Utilities:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
 
-'''
-get_url = str(input("Give URL: "))
-# get_url = read_line()
-name = get_url.split("/")[-1]
-fullname = str(name) + ".jpg"
+# from test_sizeDetection.cv_utilities import Utilities as utils
 
 
-def download_image():
-    # save_path = "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeDetection2/downloaded_images/"
-    save_path = "../test_sizeDetection2/downloaded_images/"
-    # get_url = str(input("Give URL: "))
-    # get_url = read_line()
-    # name = get_url.split("/")[-1]
-    # fullname = str(name) + ".jpg"
-    print(fullname)
-    urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
+import cv2
+import os
 
-    def save_processed_img():
-        path = "./test_sizeDetection2/processed_images"
-        print(path)
-        print(fullname)
-        cv2.imwrite(os.path.join(path, "dfjd.jpg"), fullname)
 
-    save_processed_img()
-    download_image() 
-    '''
+class ComputerVision(Utilities):
+    # def __init__(self):
+    #   Utilities.__init__(self)
+
+    def __init__(self):
+        Utilities.__init__(self)
+        self.utils = Utilities()
+        self.pixelsPerMetric = None
+
+    def measure_object_dimension(self, image, coin_diameter, unit,
+                                 resize_width=700, rotate_angle=0, blur=(5, 5), cannyMin=50, cannyMax=100,
+                                 edge_iterations=1):  # changed cannyMin
+
+        utils = self.utils
+        pixelsPerMetric = self.pixelsPerMetric
+
+        # I. GET ALL OBJECTS IN THE IMAGE
+        # step I.1: load the image, convert it to grayscale, and blur it slightly
+        resized, blurred = utils.optimize_image(image, resize_width, rotate_angle, blur)
+
+        # step I.2: perform edge detection, then perform a dilation + erotion to close gaps in between object edges
+        edge = utils.detect_edge(blurred, cannyMin, cannyMax)
+
+        # step I.3: find and sort objects (sort from left-to-right)
+        objs = utils.detect_and_sort_objects(edge)
+
+        # II. LOOP OVER THE OBJECTS IDENTIFIED
+        for obj in objs:
+            # step II.1: compute the bounding box of the object and draw the box (rectangle)
+            box, original_image = utils.create_bounding_box(resized, obj)
+
+            # step II.2: mark the corners of the box
+            utils.mark_corners(box, original_image)
+
+            # step II.3: compute the midpoints and mark them
+            tltrX, tltrY, blbrX, blbrY, tlblX, tlblY, trbrX, trbrY = utils.get_midpoints(box, original_image)
+
+            # step II.4: compute the Euclidean distance between the midpoints
+            dA, dB = utils.get_distances(tltrX, tltrY, blbrX, blbrY, tlblX, tlblY, trbrX, trbrY)
+
+            # step II.5: perform the calibration pixel to millimeters if the pixels per metric has not been initialized
+            if pixelsPerMetric is None: pixelsPerMetric = dB / coin_diameter
+
+            # step II.6: compute the dimension of the object and show them on the image
+            utils.get_dimensions(dA, dB, pixelsPerMetric, original_image, unit, tltrX, tltrY, trbrX, trbrY)
+
+            cv2.imshow(image, original_image)
+            cv2.waitKey(0)
+
+        cv2.destroyAllWindows()
+
+
+# from test_sizeMixed.measurement_pydo import ComputerVision
+
+import os
+
+
+class final:
+    cv = ComputerVision()
+
+    cwd = os.getcwd()
+    file_all = os.listdir(cwd)
+
+    images = []
+
+    for f in file_all:
+        if f.lower().endswith('jpg'): images.append(f)  # checks for all files with the given extension
+
+    for i in images:
+        image = i
+        cv.measure_object_dimension(image, coin_diameter=24, unit='mm')  # mm measure
