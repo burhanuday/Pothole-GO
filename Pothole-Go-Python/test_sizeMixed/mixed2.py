@@ -3,6 +3,8 @@ from builtins import input
 import imutils
 import numpy as np
 import cv2
+import json
+import sys
 import os
 from skimage import feature
 from skimage import io
@@ -116,9 +118,13 @@ class Utilities:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
 
-'''
-get_url = str(input("Give URL: "))
-# get_url = read_line()
+def read_line():
+    lines = sys.stdin.readlines()
+    return json.loads(lines[0])
+
+
+# get_url = str(input("Give URL: "))
+get_url = read_line()
 name = get_url.split("/")[-1]
 fullname = str(name) + ".jpg"
 
@@ -140,8 +146,9 @@ def download_image():
         cv2.imwrite(os.path.join(path, "dfjd.jpg"), fullname)
 
     save_processed_img()
-    download_image() 
-    '''
+
+
+download_image()
 
 # from test_sizeDetection2.cv_utilities2 import Utilities as utils
 
@@ -150,6 +157,7 @@ import os, sys
 import urllib.request
 import urllib.parse
 import base64
+
 
 class ComputerVision(Utilities):
     def __init__(self):
@@ -204,8 +212,9 @@ class ComputerVision(Utilities):
 
         cv2.destroyAllWindows()
 
-#from test_sizeDetection2.measurement_pydo2 import ComputerVision
-#from test_sizeDetection2.cv_utilities2 import Utilities
+
+# from test_sizeDetection2.measurement_pydo2 import ComputerVision
+# from test_sizeDetection2.cv_utilities2 import Utilities
 import os
 import sys, json, os
 import sys, json, os
@@ -289,6 +298,8 @@ def download_image():
 
         save_processed_img()
         '''
+
+
 '''
     def save_processed_img():
         path = "../test_sizeDetection2/processed_images/"
@@ -380,4 +391,3 @@ get_url = str(input("Give URL: "))
 
             download_image()
             '''
-
