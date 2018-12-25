@@ -3,10 +3,12 @@ const path = require("path");
 
 module.exports = data => {
   console.log(data);
-  let pythonScriptPth = path.resolve(__dirname, "../Pothole-GO-python/test_sizeDetection/main_run.py");
+  let pythonScriptPth = path.resolve(__dirname, "../Pothole-GO-python/test_sizeMixed/mixed2.py");
   console.log(pythonScriptPth);
 
-  let pyshell = new PYShell(pythonScriptPth);
+  let pyshell = new PYShell(pythonScriptPth, {
+    pythonPath: '/usr/local/bin/python3.6'
+  });
   // console.log(pyshell);
   pyshell.send(JSON.stringify(data));
   pyshell.on("message", function(message) {
