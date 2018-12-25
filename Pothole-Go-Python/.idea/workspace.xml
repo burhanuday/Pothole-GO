@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="73" column="22" lean-forward="true" selection-end-line="175" selection-end-column="15" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="16" selection-end-line="19" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2759">
-              <caret line="279" column="10" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="10" />
+            <state relative-caret-position="136">
+              <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -145,6 +145,17 @@
               <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
               <item name="test_sizeDetection2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_sizeMixed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_sizeMixed" type="462c0819:PsiDirectoryNode" />
+              <item name="downloaded_images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -311,7 +322,7 @@
       <updated>1545378039722</updated>
       <workItem from="1545378051605" duration="3263000" />
       <workItem from="1545538755808" duration="25376000" />
-      <workItem from="1545664656374" duration="11360000" />
+      <workItem from="1545664656374" duration="12154000" />
     </task>
     <servers />
   </component>
@@ -321,7 +332,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39999000" />
+    <option name="totallyTimeSpent" value="40793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -439,16 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="73" column="22" lean-forward="true" selection-end-line="175" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -473,10 +474,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="16" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2759">
-          <caret line="279" column="10" selection-start-line="279" selection-start-column="10" selection-end-line="279" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
