@@ -20,7 +20,7 @@ import sys
 
 class Utilities:
     def __init__(self):
-        print('Waiting for files...')
+        print('Processing...')
 
     def optimize_image(self, filename, resize_width, rotate_angle, blur):
         image = cv2.imread(filename)
@@ -29,6 +29,7 @@ class Utilities:
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         gray = cv2.GaussianBlur(gray, blur, 0)
         cv2.imshow('Gray', gray)
+        print("Optimize Image(image): ", type(image))
         return image, gray
 
     def detect_edge(self, gray, cannyMin, cannyMax):
@@ -38,6 +39,7 @@ class Utilities:
         edged = cv2.dilate(edged, None, iterations=1)  # try playing with iterations
         edged = cv2.erode(edged, None, iterations=1)
         cv2.imshow('Edged', edged)
+        print("Edged: ", type(edged))
         return edged
 
     def detect_and_sort_objects(self, image):
@@ -61,12 +63,13 @@ class Utilities:
         '''
         box = perspective.order_points(box)
         if draw == True: cv2.drawContours(orig, [box.astype('int')], -1, (0, 255, 0), 1)
+        print("Orig: ", type(orig))
         return box, orig
 
     def mark_corners(self, box, image):
         for (x, y) in box:
             cv2.circle(image, (int(x), int(y)), 3, (0, 0, 255), -1)
-            print(type(image))
+            print("Type in Utilities class: ", type(image))
 
     def get_midpoints(self, box, image, draw=True):
         def midpoint(ptA, ptB):
@@ -110,6 +113,9 @@ class Utilities:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         cv2.putText(image, "{:.1f}{}".format(dimB, unit), (int(trbrX + 10), int(trbrY)),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+        print("get_dimensions: ", type(image))
+        cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed_images/processed_final.jpg", image)
+        cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed2.jpg", image)
 
 
 '''
@@ -131,12 +137,12 @@ def download_image():
     print(fullname)
     s = urllib.request.urlretrieve(get_url, save_path + "{:s}".format(str(fullname)))
 
-    def save_processed_img():
-        path = "./test_sizeMixed/processed_images"
-        print(path)
-        # cv2.imwrite(os.path.join(path, "dfjd.jpg"), s)
+    # def save_processed_img():
+    # path = "./test_sizeMixed/processed_images"
+    # print(path)
+    # cv2.imwrite(os.path.join(path, "dfjd.jpg"), s)
 
-    save_processed_img()
+    # save_processed_img()
 
 
 download_image()
@@ -186,7 +192,8 @@ class ComputerVision(Utilities):
             utils.get_dimensions(dA, dB, pixelsPerMetric, original_image, unit, tltrX, tltrY, trbrX, trbrY)
 
             cv2.imshow(image, original_image)
-            print(type(image))
+            print("Type in CompVis Class(original_image): ", type(original_image))
+            print("Type in CompVis Class(image): ", type(image))
             cv2.waitKey(0)
 
         cv2.destroyAllWindows()
@@ -225,6 +232,7 @@ for f in file_all:
 
 for i in images:
     image = os.path.join(d['directory'], i)
+    print("i in images type: ", type(image))
     cv.measure_object_dimension(image, coin_diameter=int(d['coin_diameter']), unit=d['unit'],
                                 resize_width=int(d['resize_width']), rotate_angle=int(d['rotate_angle']),
                                 blur=(int(d['blur']), int(d['blur'])),
