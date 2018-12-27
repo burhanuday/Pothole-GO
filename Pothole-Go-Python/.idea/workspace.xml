@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeMixed/downloaded_images/2018-12-23%2018.30.44.jpg_1545570112694 .jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_sizeMixed/mixed3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeMixed/mixed3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeMixed/processed2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeMixed/processed_images/processed_final.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,27 +27,15 @@
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$pytest_in_test_objectParameters2_py.coverage" NAME="pytest in test_objectParameters2.py Coverage Results" MODIFIED="1545541357496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$1test_objectParameters2.coverage" NAME="1test_objectParameters2 Coverage Results" MODIFIED="1545542643947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed1.coverage" NAME="mixed1 Coverage Results" MODIFIED="1545753901256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed3.coverage" NAME="mixed3 Coverage Results" MODIFIED="1545877281353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed3.coverage" NAME="mixed3 Coverage Results" MODIFIED="1545885062881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2147">
-              <caret line="395" column="16" lean-forward="true" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="242" column="46" selection-start-line="242" selection-start-column="2" selection-end-line="242" selection-end-column="94" />
+            <state relative-caret-position="6477">
+              <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -53,17 +44,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py">
+        <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1834" />
+            <state relative-caret-position="306">
+              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_sizeMixed/parameter_file.txt">
+        <entry file="file://$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state relative-caret-position="34">
+              <caret line="2" column="67" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="67" />
+              <folding>
+                <element signature="e#212#254#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,27 +120,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
-              <item name="SizeDetection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
-              <item name="test_sizeMixed" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +282,8 @@
       <workItem from="1545378051605" duration="3263000" />
       <workItem from="1545538755808" duration="25376000" />
       <workItem from="1545664656374" duration="12217000" />
-      <workItem from="1545800464838" duration="6477000" />
+      <workItem from="1545800464838" duration="10692000" />
+      <workItem from="1545920633074" duration="1233000" />
     </task>
     <servers />
   </component>
@@ -313,18 +293,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47333000" />
+    <option name="totallyTimeSpent" value="52781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +312,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -438,9 +417,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/downloaded_images/S1.png_1545539333813 .jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/downloaded_images/S1.png_1545539333813 .jpg" />
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -461,47 +438,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="395" column="16" lean-forward="true" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/parameter_file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed_images/file.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed_images/processed_final.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed_images/file.jpg" />
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed2.jpg" />
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test_pothole.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test3.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="242" column="46" selection-start-line="242" selection-start-column="2" selection-end-line="242" selection-end-column="94" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SizeDetection/1_test1.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -513,9 +456,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SizeDetection/example_01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SizeDetection/1_test_pothole.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SizeDetection/rsz_pothole1.jpg">
@@ -533,9 +473,45 @@
     <entry file="file://$PROJECT_DIR$/SizeDetection/test7.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/parameter_file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed_images/processed_final.jpg" />
+    <entry file="file://$PROJECT_DIR$/SizeDetection/1_test_pothole.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6477">
+          <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1834" />
+        <state relative-caret-position="34">
+          <caret line="2" column="67" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="67" />
+          <folding>
+            <element signature="e#212#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

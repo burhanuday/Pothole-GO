@@ -118,11 +118,11 @@ class Utilities:
         cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed2.jpg", image)
 
 
-'''
+
 def read_line():
     lines = sys.stdin.readlines()
     return json.loads(lines[0])
-'''
+
 
 get_url = str(input("Give URL: "))
 # get_url = read_line()
