@@ -45,7 +45,7 @@ exports.createAPothole = (req, res, next) => {
               .save()
               .then(success => {
                 // console.log(success);
-                talk(obj.images.original);
+                talk(obj.images.original[0]);
                 console.log("Successfully saved");
                 res.status(201).json({ success: "Saved" });
               })

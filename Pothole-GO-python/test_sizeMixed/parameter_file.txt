@@ -1,4 +1,4 @@
-directory = E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeMixed\downloaded_images
+directory = /Users/idrees/Documents/Projects/extra-projects/DeepBlue/Pothole-GO-Server/Pothole-GO-Python/test_sizeMixed/parameter_file.txt
 image_file_extensions = jpg, jpeg, tif, tiff, bmp, png
 coin_diameter = 24
 unit = mm

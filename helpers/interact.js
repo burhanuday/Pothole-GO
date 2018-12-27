@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = data => {
   console.log(data);
-  let pythonScriptPth = path.resolve(__dirname, "../Pothole-GO-python/test_sizeMixed/mixed2.py");
+  let pythonScriptPth = path.resolve(__dirname, "../Pothole-GO-Python/Pothole-Go-Python/test_sizeMixed/mixed3.py");
   console.log(pythonScriptPth);
 
   let pyshell = new PYShell(pythonScriptPth);
@@ -19,7 +19,7 @@ module.exports = data => {
     if (err) {
       throw err;
     }
-
+  
     console.log("finished");
   });
 };
