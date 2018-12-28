@@ -114,9 +114,11 @@ class Utilities:
         cv2.putText(image, "{:.1f}{}".format(dimB, unit), (int(trbrX + 10), int(trbrY)),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         print("get_dimensions: ", type(image))
-        cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed_images/processed_final.jpg", image)
-        cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed2.jpg", image)
-
+        cv2.imwrite(
+            "E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed_images/processed_final.jpg",
+            image)
+        cv2.imwrite("E:/PythonProjects/pythonGo/Pothole-GO/Pothole-GO/Pothole-Go-Python/test_sizeMixed/processed2.jpg",
+                    image)
 
 
 def read_line():

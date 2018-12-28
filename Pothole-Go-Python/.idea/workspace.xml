@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeMixed/downloaded_images/2018-12-23%2018.30.44.jpg_1545570112694 .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeMixed/mixed3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeMixed/mixed3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeMixed/processed2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sizeMixed/processed_images/processed_final.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +115,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,7 +279,8 @@
       <workItem from="1545538755808" duration="25376000" />
       <workItem from="1545664656374" duration="12217000" />
       <workItem from="1545800464838" duration="10692000" />
-      <workItem from="1545920633074" duration="1233000" />
+      <workItem from="1545920633074" duration="1859000" />
+      <workItem from="1545966253681" duration="590000" />
     </task>
     <servers />
   </component>
@@ -293,12 +290,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52781000" />
+    <option name="totallyTimeSpent" value="53997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -312,7 +309,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
