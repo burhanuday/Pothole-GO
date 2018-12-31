@@ -45,7 +45,7 @@ exports.createAPothole = (req, res, next) => {
               .save()
               .then(success => {
                 // console.log(success);
-                talk(obj.images.original[0]);
+                // talk(obj.images.original[0]);
                 console.log("Successfully saved");
                 res.status(201).json({ success: "Saved" });
               })
@@ -61,10 +61,11 @@ exports.createAPothole = (req, res, next) => {
 exports.getAllPotholes = (req, res, next) => {
   // If the url contains lat and lng in the query object, show nearby potholes
   jwt.verify(req.token, "secretkey", (err, data) => {
+    const queryPothole = {};
     if (err) console.log(err);
     else {
       if (req.query.lat && req.query.lng) {
-        const q = {
+        queryPothole = {
           location: {
             $near: {
               $geometry: {
@@ -76,19 +77,12 @@ exports.getAllPotholes = (req, res, next) => {
             }
           }
         };
-
-        POTHOLE_MODEL.find(q)
-          .then(potholes => res.status(200).json(potholes))
-          .catch(err => res.json(err));
       } else {
-        POTHOLE_MODEL.find({})
-          .then(potholes => {
-            if (potholes) {
-              res.status(200).json(potholes);
-            }
-          })
-          .catch(err => res.json(err));
+        queryPothole = {};
       }
+      POTHOLE_MODEL.find(queryPothole)
+        .then(potholes => res.status(200).json(potholes))
+        .catch(err => res.json(err));
     }
   });
 };
