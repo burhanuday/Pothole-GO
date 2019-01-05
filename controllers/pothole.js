@@ -61,7 +61,7 @@ exports.createAPothole = (req, res, next) => {
 exports.getAllPotholes = (req, res, next) => {
   // If the url contains lat and lng in the query object, show nearby potholes
   jwt.verify(req.token, "secretkey", (err, data) => {
-    const queryPothole = {};
+    let queryPothole = {};
     if (err) console.log(err);
     else {
       if (req.query.lat && req.query.lng) {
