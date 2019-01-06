@@ -53,6 +53,10 @@ exports.createAPothole = (req, res, next) => {
             clearInterval(wait);
           }
         }, 1000);
+      } else {
+        res.status(400).json({
+          message: "Images not provided"
+        })
       }
     }
   });
