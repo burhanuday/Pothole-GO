@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_ML/test1_cropImages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/2resized_pothole_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/modelPrediction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/modelTrain1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/modelTrain2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test1_imageResize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pothole-Go-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pothole-Go-Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ML/test1_cropImages.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ML/dataGenerate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sizeMixed/mixed3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_sizeMixed/mixed3_working.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,32 +24,83 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$modelTrain2.coverage" NAME="modelTrain2 Coverage Results" MODIFIED="1547804498745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$modelPrediction.coverage" NAME="modelPrediction Coverage Results" MODIFIED="1547808850628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_imageResize.coverage" NAME="test1_imageResize Coverage Results" MODIFIED="1547802595886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$measurement_pydo2.coverage" NAME="measurement_pydo2 Coverage Results" MODIFIED="1545572737329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$main_run.coverage" NAME="main_run Coverage Results" MODIFIED="1545539673855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$pytest_in_test_objectParameters2_py.coverage" NAME="pytest in test_objectParameters2.py Coverage Results" MODIFIED="1545541357496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed3.coverage" NAME="mixed3 Coverage Results" MODIFIED="1545885062881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_renameAllfiles.coverage" NAME="test1_renameAllfiles Coverage Results" MODIFIED="1547602859844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$main_run__1_.coverage" NAME="main_run (1) Coverage Results" MODIFIED="1545572622845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_objectParameters2.coverage" NAME="test1_objectParameters2 Coverage Results" MODIFIED="1545749400543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$connection_trial1.coverage" NAME="connection_trial1 Coverage Results" MODIFIED="1545561707016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed2.coverage" NAME="mixed2 Coverage Results" MODIFIED="1545806387089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$measurement_pydo2.coverage" NAME="measurement_pydo2 Coverage Results" MODIFIED="1545572737329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$main_run.coverage" NAME="main_run Coverage Results" MODIFIED="1545539673855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$pytest_in_test_objectParameters2_py.coverage" NAME="pytest in test_objectParameters2.py Coverage Results" MODIFIED="1545541357496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$dataGenerate.coverage" NAME="dataGenerate Coverage Results" MODIFIED="1547804471908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$modelTrain1.coverage" NAME="modelTrain1 Coverage Results" MODIFIED="1547802928073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$1test_objectParameters2.coverage" NAME="1test_objectParameters2 Coverage Results" MODIFIED="1545542643947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed1.coverage" NAME="mixed1 Coverage Results" MODIFIED="1545753901256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed3.coverage" NAME="mixed3 Coverage Results" MODIFIED="1545885062881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_renameAllfiles.coverage" NAME="test1_renameAllfiles Coverage Results" MODIFIED="1547092530324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state>
+              <caret line="6" column="100" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_ML/dataGenerate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3_working.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_ML/modelTrain1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_ML/modelTrain2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_ML/test1_cropImages.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/test_ML/modelPrediction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -59,6 +118,9 @@
       <find>waitin</find>
       <find>waiting</find>
     </findStrings>
+    <dirStrings>
+      <dir>E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -81,16 +143,23 @@
         <option value="$PROJECT_DIR$/test_sizeMixed/mixed2.py" />
         <option value="$PROJECT_DIR$/test_sizeMixed/parameter_file.txt" />
         <option value="$PROJECT_DIR$/test_sizeMixed/mixed3.py" />
-        <option value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
         <option value="$PROJECT_DIR$/test_ML/test1_cropImages.py" />
+        <option value="$PROJECT_DIR$/test_ML/test1_potholeDetection.py" />
+        <option value="$PROJECT_DIR$/test_ML/testImages_pothole/modelTrain1.py" />
+        <option value="$PROJECT_DIR$/test_ML/modelTrain2.py" />
+        <option value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
+        <option value="$PROJECT_DIR$/test_ML/dataGenerate.py" />
+        <option value="$PROJECT_DIR$/test_ML/modelTrain1.py" />
+        <option value="$PROJECT_DIR$/test_ML/test1_imageResize.py" />
+        <option value="$PROJECT_DIR$/test_ML/modelPrediction.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -119,15 +188,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../DataAnalysisPart1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../BeginningPython-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole\NoPothole" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole\Pothole" />
       <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeMixed" />
-      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeDetection2\sample_images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,96 +218,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test1_renameAllfiles">
-    <configuration name="mixed1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pothole-Go-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeMixed" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeMixed/mixed1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mixed2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pothole-Go-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeMixed" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeMixed/mixed2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mixed3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pothole-Go-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeMixed" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeMixed/mixed3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1_objectParameters2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pothole-Go-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_sizeDetection2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1_renameAllfiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.modelPrediction">
+    <configuration name="dataGenerate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pothole-Go-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,7 +232,95 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/dataGenerate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modelPrediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-Go-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/modelPrediction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modelTrain1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-Go-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/modelTrain1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modelTrain2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-Go-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/modelTrain2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test1_imageResize" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-Go-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/test1_imageResize.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,11 +331,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test1_renameAllfiles" />
-        <item itemvalue="Python.mixed3" />
-        <item itemvalue="Python.mixed2" />
-        <item itemvalue="Python.mixed1" />
-        <item itemvalue="Python.test1_objectParameters2" />
+        <item itemvalue="Python.modelPrediction" />
+        <item itemvalue="Python.modelTrain2" />
+        <item itemvalue="Python.dataGenerate" />
+        <item itemvalue="Python.modelTrain1" />
+        <item itemvalue="Python.test1_imageResize" />
       </list>
     </recent_temporary>
   </component>
@@ -281,7 +357,12 @@
       <workItem from="1545966253681" duration="1801000" />
       <workItem from="1546453411739" duration="1695000" />
       <workItem from="1546575126412" duration="1755000" />
-      <workItem from="1547091953261" duration="1672000" />
+      <workItem from="1547091953261" duration="2396000" />
+      <workItem from="1547478781562" duration="5461000" />
+      <workItem from="1547602433998" duration="2477000" />
+      <workItem from="1547713811204" duration="8977000" />
+      <workItem from="1548226330222" duration="723000" />
+      <workItem from="1548240553869" duration="631000" />
     </task>
     <servers />
   </component>
@@ -291,18 +372,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60330000" />
+    <option name="totallyTimeSpent" value="79323000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20347957" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21860817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/connection_trial1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -399,34 +472,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/main_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" selection-start-line="9" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="122" selection-start-line="118" selection-start-column="4" selection-end-line="122" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/downloaded_images/S1.png_1545539333813 .jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="16" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -483,26 +529,6 @@
     <entry file="file://$PROJECT_DIR$/SizeDetection/1_test_pothole.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6477">
-          <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SizeDetection/test2_sizeDetection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -513,15 +539,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
+    <entry file="file://$PROJECT_DIR$/test_ML/test1_potholeDetection.py" />
+    <entry file="file://$PROJECT_DIR$/test_ML/test1_cropImages.py" />
+    <entry file="file://$PROJECT_DIR$/test_ML/1_pothole.jpg" />
+    <entry file="file://$PROJECT_DIR$/test_ML/testImages_pothole/Pothole/0.jpg" />
+    <entry file="file://$PROJECT_DIR$/test_ML/testImages_pothole/NoPothole/10.jpg" />
+    <entry file="file://$PROJECT_DIR$/CannyEdgeDetection/test1_height.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="-1001" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/main_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" selection-start-line="9" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ML/test1_cropImages.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/connection_trial1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/test1_objectParameters2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="19" selection-start-line="16" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="110" column="10" lean-forward="true" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4811">
+          <caret line="395" column="16" selection-start-line="395" selection-start-column="16" selection-end-line="395" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test1_imageResize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="100" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/dataGenerate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3_working.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/modelTrain1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/modelTrain2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/modelPrediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
