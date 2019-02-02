@@ -5,7 +5,163 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8c6ee56-2780-4f96-9f99-079d76fc4568" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/good roads cropped/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/good roads/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_detection/potholes/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/download (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (5).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images (6).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/pothole-1264496901-large-article-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/road-1031702_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/road-asphalt-space-sky-56832.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test_cropped/you-are-tempted-to-say.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/Datasets/weather-archive-jena.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/cropimage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/global.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/pothole detection/output/data.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/pothole detection/output/labels.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/potholeCount2/pothole_detector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/1resized_noPothole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/2resized_pothole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/count.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ML/test_potholecount/test7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pothole-Go-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pothole-Go-Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +172,17 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$modelTrain2.coverage" NAME="modelTrain2 Coverage Results" MODIFIED="1547804498745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$modelPrediction.coverage" NAME="modelPrediction Coverage Results" MODIFIED="1547808850628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$pothole_detector.coverage" NAME="pothole_detector Coverage Results" MODIFIED="1549033521330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML/potholeCount2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_imageResize.coverage" NAME="test1_imageResize Coverage Results" MODIFIED="1547802595886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$measurement_pydo2.coverage" NAME="measurement_pydo2 Coverage Results" MODIFIED="1545572737329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$main_run.coverage" NAME="main_run Coverage Results" MODIFIED="1545539673855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$pytest_in_test_objectParameters2_py.coverage" NAME="pytest in test_objectParameters2.py Coverage Results" MODIFIED="1545541357496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed3.coverage" NAME="mixed3 Coverage Results" MODIFIED="1545885062881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
-    <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_renameAllfiles.coverage" NAME="test1_renameAllfiles Coverage Results" MODIFIED="1547602859844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_renameAllfiles.coverage" NAME="test1_renameAllfiles Coverage Results" MODIFIED="1549032788136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$main_run__1_.coverage" NAME="main_run (1) Coverage Results" MODIFIED="1545572622845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$test1_objectParameters2.coverage" NAME="test1_objectParameters2 Coverage Results" MODIFIED="1545749400543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$global.coverage" NAME="global Coverage Results" MODIFIED="1549033143377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML/potholeCount2" />
+    <SUITE FILE_PATH="coverage/Pothole_Go_Python$count.coverage" NAME="count Coverage Results" MODIFIED="1548666980353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML/test_potholecount" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$connection_trial1.coverage" NAME="connection_trial1 Coverage Results" MODIFIED="1545561707016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeDetection2" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$mixed2.coverage" NAME="mixed2 Coverage Results" MODIFIED="1545806387089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_sizeMixed" />
     <SUITE FILE_PATH="coverage/Pothole_Go_Python$dataGenerate.coverage" NAME="dataGenerate Coverage Results" MODIFIED="1547804471908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_ML" />
@@ -34,61 +193,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
+        <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/cropimage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="6" column="100" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
+            <state relative-caret-position="5">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ML/dataGenerate.py">
+        <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/global.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3_working.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ML/modelTrain1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ML/modelTrain2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+            <state relative-caret-position="-124">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
-                <element signature="e#0#53#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_ML/modelPrediction.py">
+        <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/pothole_detector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -107,6 +245,7 @@
       <find>type</find>
       <find>waitin</find>
       <find>waiting</find>
+      <find>40</find>
     </findStrings>
     <dirStrings>
       <dir>E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML</dir>
@@ -137,11 +276,15 @@
         <option value="$PROJECT_DIR$/test_ML/test1_potholeDetection.py" />
         <option value="$PROJECT_DIR$/test_ML/testImages_pothole/modelTrain1.py" />
         <option value="$PROJECT_DIR$/test_ML/modelTrain2.py" />
-        <option value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
         <option value="$PROJECT_DIR$/test_ML/dataGenerate.py" />
         <option value="$PROJECT_DIR$/test_ML/modelTrain1.py" />
         <option value="$PROJECT_DIR$/test_ML/test1_imageResize.py" />
         <option value="$PROJECT_DIR$/test_ML/modelPrediction.py" />
+        <option value="$PROJECT_DIR$/test_ML/test_potholecount/count.py" />
+        <option value="$PROJECT_DIR$/test_ML/potholeCount2/cropimage.py" />
+        <option value="$PROJECT_DIR$/test_ML/potholeCount2/pothole_detector.py" />
+        <option value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
+        <option value="$PROJECT_DIR$/test_ML/potholeCount2/global.py" />
       </list>
     </option>
   </component>
@@ -169,6 +312,27 @@
               <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
               <item name="test_ML" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_ML" type="462c0819:PsiDirectoryNode" />
+              <item name="potholeCount2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_ML" type="462c0819:PsiDirectoryNode" />
+              <item name="potholeCount2" type="462c0819:PsiDirectoryNode" />
+              <item name="Datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pothole-Go-Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pothole-Go-Python" type="462c0819:PsiDirectoryNode" />
+              <item name="test_ML" type="462c0819:PsiDirectoryNode" />
+              <item name="potholeCount2" type="462c0819:PsiDirectoryNode" />
+              <item name="Datasets" type="462c0819:PsiDirectoryNode" />
+              <item name="pothole_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -178,7 +342,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../potholes-detection-master_yolo/potholes-detection-yolo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -189,11 +353,11 @@
       <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\potholeCount2" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\test_potholecount" />
       <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML" />
+      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole" />
       <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole\NoPothole" />
-      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_ML\testImages_pothole\Pothole" />
-      <recent name="E:\PythonProjects\pythonGo\Pothole-GO\Pothole-GO\Pothole-Go-Python\test_sizeMixed" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -208,8 +372,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.modelPrediction">
-    <configuration name="dataGenerate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.pothole_detector">
+    <configuration name="count" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pothole-Go-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -217,12 +381,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML/test_potholecount" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/dataGenerate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/test_potholecount/count.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="global" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Pothole-Go-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML/potholeCount2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/potholeCount2/global.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,7 +439,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="modelTrain1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pothole_detector" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pothole-Go-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -261,12 +447,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML/potholeCount2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/modelTrain1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/potholeCount2/pothole_detector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -275,7 +461,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="modelTrain2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test1_renameAllfiles" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Pothole-Go-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,29 +474,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/modelTrain2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1_imageResize" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Pothole-Go-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_ML" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/test1_imageResize.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ML/test1_renameAllfiles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,11 +485,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pothole_detector" />
+        <item itemvalue="Python.global" />
+        <item itemvalue="Python.test1_renameAllfiles" />
+        <item itemvalue="Python.count" />
         <item itemvalue="Python.modelPrediction" />
-        <item itemvalue="Python.modelTrain2" />
-        <item itemvalue="Python.dataGenerate" />
-        <item itemvalue="Python.modelTrain1" />
-        <item itemvalue="Python.test1_imageResize" />
       </list>
     </recent_temporary>
   </component>
@@ -353,6 +517,9 @@
       <workItem from="1547713811204" duration="8977000" />
       <workItem from="1548226330222" duration="723000" />
       <workItem from="1548240553869" duration="2497000" />
+      <workItem from="1548644141771" duration="3515000" />
+      <workItem from="1548865162390" duration="6000" />
+      <workItem from="1549013041745" duration="8164000" />
     </task>
     <servers />
   </component>
@@ -362,13 +529,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81189000" />
+    <option name="totallyTimeSpent" value="92874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21860817" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22768533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,86 +562,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_pytest_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/00000001.jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/1.jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/Qe7ik9D.jpg_1545539333821 .jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/sample_images/1_1_1_test1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/downloaded_images/Qe7ik9D.jpg_1545539333821 .jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/main_run_old1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/parameter_file.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/cv_utilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/measurement_pydo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection/test3_objectParameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/cv_utilities2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="143" column="7" selection-end-line="143" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/downloaded_images/S1.png_1545539333813 .jpg" />
-    <entry file="file://$PROJECT_DIR$/test_sizeDetection2/measurement_pydo2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="50" column="12" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed_images/file.jpg" />
     <entry file="file://$PROJECT_DIR$/test_sizeMixed/processed2.jpg" />
     <entry file="file://$PROJECT_DIR$/test_sizeDetection2/sample_images/1_test_pothole.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -594,51 +681,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" column="100" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_ML/dataGenerate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_sizeMixed/mixed3_working.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="180">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ML/modelTrain1.py">
+    <entry file="file://$PROJECT_DIR$/test_ML/2resized_pothole.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/2resized_pothole_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/2resized_pothole.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/1resized_noPothole.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/test7.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="220">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test_potholecount/4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_ML/modelTrain2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test/Alligator-to-pothole.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/Datasets/pothole_test/images (2).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/modelTrain1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/dataGenerate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_ML/modelPrediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="220">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/cropimage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/test1_renameAllfiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/global.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ML/potholeCount2/pothole_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
