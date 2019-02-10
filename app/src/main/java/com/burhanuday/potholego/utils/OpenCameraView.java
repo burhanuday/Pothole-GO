@@ -163,7 +163,7 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
             second = mPictureFileName;
             //Toast.makeText(context, "second taken", Toast.LENGTH_SHORT).show();
             firstTaken = false;
-            sendMultipleParts();
+//            sendMultipleParts();
         }
     }
 
@@ -178,33 +178,33 @@ public class OpenCameraView extends JavaCameraView implements Camera.PictureCall
         return bm;
     }
 
-    private void sendMultipleParts(){
-        showProgressDialog();
-        List<MultipartBody.Part> parts = new ArrayList<>();
-        parts.add(prepareFilePart("images", first));
-        parts.add(prepareFilePart("images", second));
-        SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
-        String token = sharedPreferences.getString("token", "");
-        ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
-        RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
-        RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
-        Call<ResponseBody> req = apiService.postPothole(parts, lat, lng);
-        req.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
-                Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show();
-                hideProgressDialog();
-                activity.finish();
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
-                hideProgressDialog();
-                activity.finish();
-            }
-        });
-    }
+//    private void sendMultipleParts(){
+//        showProgressDialog();
+//        List<MultipartBody.Part> parts = new ArrayList<>();
+//        parts.add(prepareFilePart("images", first));
+//        parts.add(prepareFilePart("images", second));
+//        SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
+//        String token = sharedPreferences.getString("token", "");
+//        ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
+//        RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
+//        RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
+//        Call<ResponseBody> req = apiService.postPothole(parts, lat, lng);
+//        req.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
+//                Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show();
+//                hideProgressDialog();
+//                activity.finish();
+//            }
+//
+//            @Override
+//            public void onFailure(@NonNull Call<ResponseBody> call, Throwable t) {
+//                Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
+//                hideProgressDialog();
+//                activity.finish();
+//            }
+//        });
+//    }
 
     private MultipartBody.Part prepareFilePart(String partName, String path){
         if (!FolderUtil.checkIfFileExist(path)){

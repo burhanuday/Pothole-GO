@@ -17,9 +17,14 @@ public interface ApiService{
 
     @Multipart
     @POST("create")
-    Call<ResponseBody> postPothole(@Part List<MultipartBody.Part> images,
+    Call<ResponseBody> postPothole(@Part MultipartBody.Part image,
                     @Part("lat") RequestBody latitude,
-                    @Part("lng") RequestBody longitude);
+                    @Part("lng") RequestBody longitude, @Part("pitch") RequestBody pitch);
+
+    @Multipart
+    @POST("verify/{id}")
+    Call<ResponseBody> updatePothole(@Part MultipartBody.Part updatedimage, @Part("lat") RequestBody latitude,
+                                   @Part("lng") RequestBody longitude, @Path("id") String id);
 
     @GET("potholes")
     Call<List<Pothole>> getAll();

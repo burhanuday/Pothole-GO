@@ -6,4 +6,5 @@ package com.burhanuday.potholego.models
 object LocationHolder {
     var LATITUDE:String? = null
     var LONGITUDE:String? = null
+    var PITCH:String? = null
 }

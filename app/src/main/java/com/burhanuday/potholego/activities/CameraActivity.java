@@ -32,19 +32,20 @@ import retrofit2.Response;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class CameraActivity extends AppCompatActivity {
 
     private ProgressDialog mProgressDialog = null;
-    public boolean firstTaken = false;
     private boolean isFlashOn = false;
-    String first, second;
+    String first;
     private Context context;
     private FloatingActionButton capture, flash;
     private CameraView cameraView;
+    private boolean updateMode = false;
+    private double lat = 0;
+    private double lng = 0;
+    private String id;
 
 
     @Override
@@ -54,6 +55,14 @@ public class CameraActivity extends AppCompatActivity {
         if (getSupportActionBar()!=null){
             getSupportActionBar().hide();
         }
+
+        if (getIntent().hasExtra("_id") && getIntent().hasExtra("lng") && getIntent().hasExtra("lat")){
+            updateMode = true;
+            id = getIntent().getStringExtra("_id");
+            lat = getIntent().getDoubleExtra("lat", -1);
+            lng = getIntent().getDoubleExtra("lng", -1);
+        }
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -118,30 +127,50 @@ public class CameraActivity extends AppCompatActivity {
         } catch (java.io.IOException e) {
             Log.e("PictureDemo", "Exception in photoCallback", e);
         }
-
-        if (!firstTaken){
-            first = mPictureFileName;
-            //Toast.makeText(context, "first taken", Toast.LENGTH_SHORT).show();
-            firstTaken = true;
+        first = mPictureFileName;
+        if(updateMode){
+            sendUpdate();
         }else{
-            second = mPictureFileName;
-            //Toast.makeText(context, "second taken", Toast.LENGTH_SHORT).show();
-            firstTaken = false;
             sendMultipleParts();
         }
     }
 
+    private void sendUpdate(){
+        showProgressDialog();
+        MultipartBody.Part parts = prepareFilePart("updatedimage", first);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
+        String token = sharedPreferences.getString("token", "");
+        ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
+        RequestBody lat = RequestBody.create(MediaType.parse("text/*"), String.valueOf(this.lat));
+        RequestBody lng = RequestBody.create(MediaType.parse("text/*"), String.valueOf(this.lng));
+        Call<ResponseBody> req = apiService.updatePothole(parts, lat, lng, this.id);
+        req.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
+                Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show();
+                hideProgressDialog();
+                finish();
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
+                hideProgressDialog();
+                finish();
+            }
+        });
+    }
+
     private void sendMultipleParts(){
         showProgressDialog();
-        List<MultipartBody.Part> parts = new ArrayList<>();
-        parts.add(prepareFilePart("images", first));
-        parts.add(prepareFilePart("images", second));
+        MultipartBody.Part parts = prepareFilePart("image", first);
         SharedPreferences sharedPreferences = context.getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE);
         String token = sharedPreferences.getString("token", "");
         ApiService apiService = ApiClient.getInstance(token).create(ApiService.class);
         RequestBody lat = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLATITUDE()));
         RequestBody lng = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getLONGITUDE()));
-        Call<ResponseBody> req = apiService.postPothole(parts, lat, lng);
+        RequestBody pitch = RequestBody.create(MediaType.parse("text/*"), Objects.requireNonNull(LocationHolder.INSTANCE.getPITCH()));
+        Call<ResponseBody> req = apiService.postPothole(parts, lat, lng, pitch);
         req.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(@NonNull Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -164,7 +193,7 @@ public class CameraActivity extends AppCompatActivity {
             Toast.makeText(context, "ERROR GETTING FILE: DOES NOT EXIST", Toast.LENGTH_SHORT).show();
         }
         File file = new File(path);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("image/jpg"), file);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("image/*"), file);
         return MultipartBody.Part.createFormData(partName, file.getName(), requestBody);
     }
 

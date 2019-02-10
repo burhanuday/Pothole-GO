@@ -3,6 +3,10 @@ package com.burhanuday.potholego.activities
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.*
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.location.Location
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
@@ -30,7 +34,42 @@ import retrofit2.Response
  * Created by Burhanuddin on 27-10-2018.
  */
 
-class MainActivity : AppCompatActivity(), OnMapReadyCallback {
+class MainActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListener, GoogleMap.OnMarkerClickListener {
+    override fun onMarkerClick(marker: Marker?): Boolean {
+        for (item in potholeList){
+            if (item._id.equals(marker!!.title)){
+                Toast.makeText(baseContext, "Id: " + marker.title, Toast.LENGTH_SHORT).show()
+                val openCamera = Intent(this, CameraActivity::class.java)
+                openCamera.putExtra("_id", item._id)
+                openCamera.putExtra("lat", item.location!!.lat)
+                openCamera.putExtra("lng", item.location!!.lng)
+                startActivity(openCamera)
+                return true
+            }
+        }
+        Toast.makeText(baseContext, "Did not match ", Toast.LENGTH_SHORT).show()
+        return true
+    }
+
+    private lateinit var sensorManager: SensorManager
+    private var color = false
+    private lateinit var view: View
+    private var lastUpdate:Long = 0
+    private lateinit var sensor: Sensor
+    private var TAG = "MainActivity"
+    private var pitch:Float = 0.0f
+
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+
+    }
+
+    override fun onSensorChanged(event: SensorEvent?) {
+        pitch = event!!.values[1]
+        pitch = Math.abs(pitch)
+        Log.i(TAG, pitch.toString())
+        LocationHolder.PITCH = pitch.toString()
+    }
+
     private val ZOOM_LEVEL = 15f
     private val MINIMUM_ACCURACY = 45
     private var apiService:ApiService? = null
@@ -54,6 +93,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isCompassEnabled = true
         googleMap.uiSettings.isMyLocationButtonEnabled = true
         mapReady = true
+        googleMap.setOnMarkerClickListener(this)
         //showProgressDialog()
         googleMap.setOnMyLocationChangeListener(object : GoogleMap.OnMyLocationChangeListener{
             override fun onMyLocationChange(location: Location?) {
@@ -72,9 +112,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, ZOOM_LEVEL))
                     didInitialZoom = true
                 }
-
             }
-
         })
     }
 
@@ -103,8 +141,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
          */
         val sharedPreferences = getSharedPreferences("com.burhanuday.potholego", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("token", "")
-        Log.i("mainactivity", token)
+        Log.i(TAG, token)
         apiService = ApiClient.getInstance(token).create(ApiService::class.java)
+
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION)
+        if (sensor!=null){
+            sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST)
+        }
+        lastUpdate = System.currentTimeMillis()
 
     }
 
@@ -136,7 +181,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun addMarkersOnMap(markers: List<Pothole>){
         if (mapReady) {
             for (pothole in markers) {
-                googleMap!!.addMarker(MarkerOptions().position(LatLng(pothole.location!!.lat!!, pothole.location!!.lng!!)))
+                var colour = BitmapDescriptorFactory.HUE_RED
+                if (pothole.isVerified!!){
+                    colour = BitmapDescriptorFactory.HUE_GREEN
+                }
+                googleMap!!.addMarker(MarkerOptions().position(LatLng(pothole.location!!.lat!!, pothole.location!!.lng!!))
+                    .icon(BitmapDescriptorFactory.defaultMarker(colour))
+                    .title(pothole._id))
             }
         }
     }
